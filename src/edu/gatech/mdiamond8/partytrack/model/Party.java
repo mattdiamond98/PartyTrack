@@ -15,25 +15,29 @@ public class Party {
     private List<Drink> drinkList = new ArrayList<Drink>();
     private List<Bouncer> bouncers = new ArrayList<>();
     private List<Bartender> bartenders = new ArrayList<>();
+    private int drinkLimit;
     private String hostName;
 
     /**
      * Default Party Constructor
-     * It's AEPi just servin beer
+     * It's AEPi just servin hella beer
      */
     public Party() {
         drinkList.add(new Drink());
         hostName = "AEPi";
+        drinkLimit = Integer.MAX_VALUE;
     }
 
     /**
      * Custom Party Constructor
      * Adds Beer to drink List
      * @param hostName the Party Host
+     * @param drinkLimit the max amount of drinks someone can have
      */
-    public Party(String hostName) {
+    public Party(String hostName, int drinkLimit) {
         this.hostName = hostName;
         drinkList.add(new Drink());
+        this.drinkLimit = drinkLimit;
     }
 
     /**
@@ -84,5 +88,13 @@ public class Party {
      */
     public List<Bouncer> getBouncers() {
         return bouncers;
+    }
+
+    /**
+     * Returns the limit of drinks per person set by the host
+     * @return drink limit
+     */
+    public int getDrinkLimit() {
+        return drinkLimit;
     }
 }
