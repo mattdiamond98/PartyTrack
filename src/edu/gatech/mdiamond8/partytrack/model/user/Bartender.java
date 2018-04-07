@@ -6,6 +6,9 @@ package edu.gatech.mdiamond8.partytrack.model.user;
  * Author Jordan Goldstein
  */
 public class Bartender extends User {
+    /**
+     * Bartender Constructor
+     */
     public Bartender() {
         type = Types.Bartender;
     }
