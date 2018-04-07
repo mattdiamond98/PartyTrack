@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48163fb2-5603-408c-add3-520a44c1ef37" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/Drink.java" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/Party.java" afterPath="$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/Party.java" />
-      <change beforePath="$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/user/Attendee.java" afterPath="$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/user/Attendee.java" />
-      <change beforePath="$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/user/Bartender.java" afterPath="$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/user/Bartender.java" />
-      <change beforePath="$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/user/Bouncer.java" afterPath="$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/user/Bouncer.java" />
-      <change beforePath="$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/user/User.java" afterPath="$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/user/User.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,6 +39,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Bouncer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/user/Bouncer.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -56,7 +62,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Bartender.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Bartender.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/user/Bartender.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="432">
@@ -72,12 +78,17 @@
       <file leaf-file-name="Party.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/Party.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1200">
-              <caret line="25" column="29" lean-forward="false" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+            <state relative-caret-position="2928">
+              <caret line="61" column="25" lean-forward="false" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
               <folding>
-                <element signature="e#206#213#0" expanded="true" />
-                <element signature="e#615#616#0" expanded="true" />
-                <element signature="e#651#652#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#232#239#0" expanded="true" />
+                <element signature="e#1163#1164#0" expanded="true" />
+                <element signature="e#1199#1200#0" expanded="true" />
+                <element signature="e#1341#1342#0" expanded="true" />
+                <element signature="e#1373#1374#0" expanded="true" />
+                <element signature="e#1486#1487#0" expanded="true" />
+                <element signature="e#1517#1518#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -118,12 +129,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/Party.java" />
         <option value="$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/Drink.java" />
         <option value="$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/user/User.java" />
         <option value="$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/user/Attendee.java" />
         <option value="$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/user/Bouncer.java" />
         <option value="$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/user/Bartender.java" />
+        <option value="$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/Party.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -337,18 +349,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/Party.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
-          <caret line="25" column="29" lean-forward="false" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
-          <folding>
-            <element signature="e#206#213#0" expanded="true" />
-            <element signature="e#615#616#0" expanded="true" />
-            <element signature="e#651#652#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/Drink.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1056">
@@ -373,14 +373,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/user/Attendee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1056">
-          <caret line="23" column="56" lean-forward="false" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/user/Bouncer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -400,6 +392,39 @@
             <element signature="e#223#224#0" expanded="true" />
             <element signature="e#261#262#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/Party.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2928">
+          <caret line="61" column="25" lean-forward="false" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#232#239#0" expanded="true" />
+            <element signature="e#1163#1164#0" expanded="true" />
+            <element signature="e#1199#1200#0" expanded="true" />
+            <element signature="e#1341#1342#0" expanded="true" />
+            <element signature="e#1373#1374#0" expanded="true" />
+            <element signature="e#1486#1487#0" expanded="true" />
+            <element signature="e#1517#1518#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/user/Attendee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1056">
+          <caret line="23" column="56" lean-forward="false" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
