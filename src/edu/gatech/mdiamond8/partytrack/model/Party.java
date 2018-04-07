@@ -1,5 +1,8 @@
 package edu.gatech.mdiamond8.partytrack.model;
 
+import edu.gatech.mdiamond8.partytrack.model.user.Bartender;
+import edu.gatech.mdiamond8.partytrack.model.user.Bouncer;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,6 +13,8 @@ import java.util.List;
  */
 public class Party {
     private List<Drink> drinkList = new ArrayList<Drink>();
+    private List<Bouncer> bouncers = new ArrayList<>();
+    private List<Bartender> bartenders = new ArrayList<>();
     private String hostName;
 
     /**
@@ -50,6 +55,14 @@ public class Party {
     }
 
     /**
+     * Return the Host of the Party
+     * @return party host
+     */
+    public String getHostName() {
+        return hostName;
+    }
+
+    /**
      * Returns the list of drinks allowed at the party
      * @return the drink list
      */
@@ -58,10 +71,18 @@ public class Party {
     }
 
     /**
-     * Return the Host of the Party
-     * @return party host
+     * Returns the list of approved Bartenders
+     * @return bartenders list
      */
-    public String getHostName() {
-        return hostName;
+    public List<Bartender> getBartenders() {
+        return bartenders;
+    }
+
+    /**
+     * Returns the list of approved Bouncers
+     * @return bouncers list
+     */
+    public List<Bouncer> getBouncers() {
+        return bouncers;
     }
 }
