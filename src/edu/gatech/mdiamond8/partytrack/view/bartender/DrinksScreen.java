@@ -2,6 +2,7 @@ package edu.gatech.mdiamond8.partytrack.view.bartender;
 
 import edu.gatech.mdiamond8.partytrack.qr.QRReader;
 import edu.gatech.mdiamond8.partytrack.qr.QRImage;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
@@ -31,17 +32,9 @@ public class DrinksScreen {
         scenetitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
         grid.add(scenetitle, 0, 0, 2, 1);
 
-        Label userName = new Label("Drink:");
-        grid.add(userName, 0, 1);
 
-        TextField userTextField = new TextField();
-        grid.add(userTextField, 1, 1);
 
-        Label pw = new Label("UrMomGay:");
-        grid.add(pw, 0, 2);
 
-        PasswordField pwBox = new PasswordField();
-        grid.add(pwBox, 1, 2);
 
         Button btn1 = new Button("Scan Wristband");
         HBox hbBtn1 = new HBox(10);
@@ -66,4 +59,5 @@ public class DrinksScreen {
         return grid;
 
     }
+    
 }
