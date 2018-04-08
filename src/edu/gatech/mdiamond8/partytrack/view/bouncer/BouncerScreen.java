@@ -1,7 +1,5 @@
 package edu.gatech.mdiamond8.partytrack.view.bouncer;
 
-import edu.gatech.mdiamond8.partytrack.qr.OtherReader;
-import edu.gatech.mdiamond8.partytrack.qr.QRImage;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
