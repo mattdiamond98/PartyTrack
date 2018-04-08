@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48163fb2-5603-408c-add3-520a44c1ef37" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/CodeShit" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Resources/Your Mom" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -83,8 +83,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CodeShit" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CodeShit" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CodeShit">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Your Mom" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Resources/Your Mom">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="48">
               <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
@@ -170,6 +180,7 @@
         <option value="$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/user/User.java" />
         <option value="$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/user/Bartender.java" />
         <option value="$PROJECT_DIR$/src/CodeShit" />
+        <option value="$PROJECT_DIR$/Resources/Your Mom" />
       </list>
     </option>
   </component>
@@ -201,6 +212,11 @@
             <path>
               <item name="PartyTrack" type="b2602c69:ProjectViewProjectNode" />
               <item name="PartyTrack" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PartyTrack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PartyTrack" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PartyTrack" type="b2602c69:ProjectViewProjectNode" />
@@ -512,6 +528,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeShit">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Your Mom">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
           <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
