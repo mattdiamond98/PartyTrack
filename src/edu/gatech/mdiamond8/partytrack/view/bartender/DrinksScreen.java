@@ -1,12 +1,10 @@
 package edu.gatech.mdiamond8.partytrack.view.bartender;
 
-import edu.gatech.mdiamond8.partytrack.qr.Image;
 import edu.gatech.mdiamond8.partytrack.qr.OtherReader;
 import edu.gatech.mdiamond8.partytrack.qr.QRImage;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -23,9 +21,6 @@ import java.io.IOException;
 public class DrinksScreen {
 
     public static Parent getParent(Stage primaryStage) {
-        //Image image = new Image();
-        QRImage image = new QRImage();
-
         GridPane grid = new GridPane();
         grid.setAlignment(Pos.CENTER);
         grid.setHgap(10);
@@ -55,15 +50,11 @@ public class DrinksScreen {
         grid.add(hbBtn, 1, 4);
 
         btn.setOnAction(e -> {
-            /**
-             * TODO: Sklar add code here
-             */
-            //try {
-                image.getImage();
-                //OtherReader.decode(image.getImage());
-            /*} catch (IOException ex){
+            try {
+                System.out.println(OtherReader.decode(QRImage.getImage()));
+            } catch (IOException ex){
                 System.out.println(ex);
-            }*/
+            }
             System.exit(0); //i.e. code that isn't this
         });
         return grid;
