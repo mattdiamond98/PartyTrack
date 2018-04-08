@@ -20,17 +20,16 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
+import java.util.ArrayList;
+import java.util.stream.Collectors;
+
 public class BartenderScreen {
 
-    private static TableView<OrderData> table = new TableView<OrderData>();
+    private static TableView<OrderData> table = new TableView<>();
     private static final ObservableList<OrderData> data =
             FXCollections.observableArrayList(
-                    genData(new DrinkOrder(new Attendee("randomid1432ew", "qrcode1245323d", null, "Matan Diamond"),
-                            new Drink(1, "Vodka Sprite", 8))),
-                    genData(new DrinkOrder(new Attendee("randomid7ytgfs", "qrcodehbt73esa", null, "Matthew Sklar"),
-                            new Drink(10, "Screwdriver, no OJ", 8))),
-                    genData(new DrinkOrder(new Attendee("randomid2908uf", "qrcode3fdsffsb", null, "Jordan Goldstein"),
-                            new Drink(0, "Virgin Rum and Coke", 8)))
+                    (ArrayList<OrderData>) DrinkQueue.getCurrentOrders()
+                            .stream().map(e -> genData(e)).collect(Collectors.toList())
             );
 
     public static Parent getParent(Stage primaryStage) {

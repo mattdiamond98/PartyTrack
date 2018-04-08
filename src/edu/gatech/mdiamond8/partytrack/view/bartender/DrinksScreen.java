@@ -113,6 +113,13 @@ public class DrinksScreen {
                 ex.printStackTrace();
             }
             DrinkQueue.getCurrentOrders().add(new DrinkOrder(guest, selected));
+            guest.setDrinksHad(guest.getDrinksHad() + 1);
+            guest.setOuncesAHad(guest.getOuncesAHad() + selected.getAAmount());
+            try {
+                NetworkCode.addGuest(guest);
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
         });
         final Button backButton = new Button("Back");
         backButton.setOnAction(e -> {

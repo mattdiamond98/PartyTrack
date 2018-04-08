@@ -19,8 +19,7 @@ public class Party {
     private static List<Bouncer> bouncers = new ArrayList<>();
     private static List<Bartender> bartenders = new ArrayList<>();
     private static Map<String, Attendee> attendees = new HashMap<>();
-    private static DrinkQueue drinkQueue = new DrinkQueue();
-    private static int drinkLimit = Integer.MAX_VALUE;;
+    private static int drinkLimit = Integer.MAX_VALUE;
     private static String hostName = "AEPi";;
 
     static {
@@ -111,13 +110,5 @@ public class Party {
      */
     public static int getDrinkLimit() {
         return drinkLimit;
-    }
-
-    public static DrinkQueue getDrinkQueue() {
-        return drinkQueue;
-    }
-
-    public static void setDrinkQueue(DrinkQueue queue) {
-        drinkQueue = queue;
     }
 }

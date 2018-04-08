@@ -63,6 +63,7 @@ public class BouncerScreen {
                 NetworkCode.addGuest(guest);
             } catch (Exception ex) {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setContentText("Error: This QR Code is Already Registered");
                 alert.showAndWait()
                         .filter(response -> response == ButtonType.OK);
                 ex.printStackTrace();
