@@ -1,11 +1,8 @@
 package edu.gatech.mdiamond8.partytrack.view.bartender;
 
-<<<<<<< HEAD
 import edu.gatech.mdiamond8.partytrack.Network.NetworkCode;
-=======
 import edu.gatech.mdiamond8.partytrack.model.Drink;
 import edu.gatech.mdiamond8.partytrack.model.Party;
->>>>>>> c8fb084b1eebbc0e70d3f03765cbe0454159de1d
 import edu.gatech.mdiamond8.partytrack.model.user.Attendee;
 import edu.gatech.mdiamond8.partytrack.qr.QRReader;
 import edu.gatech.mdiamond8.partytrack.qr.QRImage;
