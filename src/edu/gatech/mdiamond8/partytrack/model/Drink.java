@@ -3,7 +3,7 @@ package edu.gatech.mdiamond8.partytrack.model;
 /**
  * Represents a drink
  *
- * Author Jordan Goldstein
+ * @author Jordan Goldstein
  */
 public class Drink {
     private double aContent;

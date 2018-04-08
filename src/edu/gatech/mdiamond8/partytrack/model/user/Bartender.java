@@ -5,7 +5,7 @@ import edu.gatech.mdiamond8.partytrack.model.Drink;
 /**
  * Represents a Bartender
  *
- * Author Jordan Goldstein
+ * @author Jordan Goldstein
  */
 public class Bartender extends User {
     /**

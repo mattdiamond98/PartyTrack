@@ -1,11 +1,10 @@
 package edu.gatech.mdiamond8.partytrack.model.user;
 
 import edu.gatech.mdiamond8.partytrack.model.Party;
-
 /**
  * Represents a Bouncer
  *
- * Author Jordan Goldstein
+ * @author Jordan Goldstein
  */
 public class Bouncer extends User {
     /**
@@ -20,9 +19,16 @@ public class Bouncer extends User {
     /**
      * Create an attendee object and add them to the list
      * @param gtID the GTID of the Guest
+     * @throws IllegalArgumentException if the qrCode has
+     * already been used or is invalid
      */
-    public void allowEntry(String gtID) {
-        String qrCode = partyAt.getCode();
+    public void allowEntry(String gtID, String qrCode) {
+        if (qrCode == null) {
+            throw new IllegalArgumentException("QR Code cannot be null");
+        }
+        if (partyAt.getAttendees().get(qrCode) != null) {
+            throw new IllegalArgumentException("Can only use a QR Code once");
+        }
         Attendee newGuest = new Attendee(gtID, qrCode, partyAt);
         partyAt.addAttendee(newGuest);
     }
