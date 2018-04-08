@@ -37,13 +37,13 @@ import static edu.gatech.mdiamond8.partytrack.view.bartender.BartenderScreen.gen
 
 public class DrinksScreen {
 
-    private static TableView<DrinkData> table = new TableView<>();
-    static List<DrinkData> drinks = Party.getDrinkList().stream().map(e -> new DrinkData(e)).collect(Collectors.toList()); //look at this smexy syntax right here
-    private static final ObservableList<DrinkData> data = FXCollections.observableArrayList(drinks);
-
     private static Drink selected;
 
     public static Parent getParent(Stage primaryStage) {
+
+        TableView<DrinkData> table = new TableView<>();
+        List<DrinkData> drinks = Party.getDrinkList().stream().map(e -> new DrinkData(e)).collect(Collectors.toList()); //look at this smexy syntax right here
+        final ObservableList<DrinkData> data = FXCollections.observableArrayList(drinks);
         System.out.println(drinks);
         GridPane grid = new GridPane();
         grid.setAlignment(Pos.CENTER);

@@ -1,6 +1,7 @@
 package edu.gatech.mdiamond8.partytrack.view.admin;
 
 import edu.gatech.mdiamond8.partytrack.Config;
+import edu.gatech.mdiamond8.partytrack.Network.NetworkCode;
 import edu.gatech.mdiamond8.partytrack.excel.ExcelWriter;
 import edu.gatech.mdiamond8.partytrack.model.Drink;
 import edu.gatech.mdiamond8.partytrack.model.Party;
@@ -25,6 +26,7 @@ import javafx.stage.Stage;
 import jxl.write.WriteException;
 
 import java.io.IOException;
+import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -117,10 +119,12 @@ public class AdminScreen {
         final Button exportButton = new Button("Export Data to File");
         exportButton.setOnAction(e -> {
             ExcelWriter test = new ExcelWriter();
-            test.setOutputFile("Resources/data.xls");
+
             try {
+                ResultSet resultSet = NetworkCode.getDrinksOrdered();
+                test.setOutputFile("Resources/data.xls", resultSet);
                 test.write();
-            } catch (WriteException | IOException ex) {
+            } catch (Exception ex) {
                 ex.printStackTrace();
             }
         });

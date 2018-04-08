@@ -2,6 +2,7 @@ package edu.gatech.mdiamond8.partytrack.excel;
 
 import java.io.File;
 import java.io.IOException;
+import java.sql.ResultSet;
 import java.util.Locale;
 
 import jxl.CellView;
@@ -23,12 +24,14 @@ public class ExcelWriter {
     private WritableCellFormat timesBoldUnderline;
     private WritableCellFormat times;
     private String inputFile;
+    private ResultSet resultSet;
 
-    public void setOutputFile(String inputFile) {
+    public void setOutputFile(String inputFile, ResultSet resultSet) {
         this.inputFile = inputFile;
+        this.resultSet = resultSet;
     }
 
-    public void write() throws IOException, WriteException {
+    public void write() throws Exception {
         File file = new File(inputFile);
         WorkbookSettings wbSettings = new WorkbookSettings();
 
@@ -37,6 +40,7 @@ public class ExcelWriter {
         WritableWorkbook workbook = Workbook.createWorkbook(file, wbSettings);
         workbook.createSheet("Report", 0);
         WritableSheet excelSheet = workbook.getSheet(0);
+
         createLabel(excelSheet);
         createContent(excelSheet);
 
@@ -47,9 +51,9 @@ public class ExcelWriter {
     private void createLabel(WritableSheet sheet)
             throws WriteException {
         // Lets create a times font
-        WritableFont times10pt = new WritableFont(WritableFont.TIMES, 10);
+        WritableFont times12pt = new WritableFont(WritableFont.TIMES, 12);
         // Define the cell format
-        times = new WritableCellFormat(times10pt);
+        times = new WritableCellFormat(times12pt);
         // Lets automatically wrap the cells
         times.setWrap(true);
 
@@ -67,37 +71,20 @@ public class ExcelWriter {
         cv.setAutosize(true);
 
         // Write a few headers
-        addCaption(sheet, 0, 0, "Header 1");
-        addCaption(sheet, 1, 0, "This is another header");
-
+        addCaption(sheet, 0, 0, "Name");
+        addCaption(sheet, 1, 0, "Drink");
+        addCaption(sheet, 1, 0, "Prior Drinks");
+        addCaption(sheet, 1, 0, "Alcohol Consumed");
 
     }
 
-    private void createContent(WritableSheet sheet) throws WriteException,
-            RowsExceededException {
-        // Write a few number
-        for (int i = 1; i < 10; i++) {
-            // First column
-            addNumber(sheet, 0, i, i + 10);
-            // Second column
-            addNumber(sheet, 1, i, i * i);
-        }
-        // Lets calculate the sum of it
-        StringBuffer buf = new StringBuffer();
-        buf.append("SUM(A2:A10)");
-        Formula f = new Formula(0, 10, buf.toString());
-        sheet.addCell(f);
-        buf = new StringBuffer();
-        buf.append("SUM(B2:B10)");
-        f = new Formula(1, 10, buf.toString());
-        sheet.addCell(f);
-
+    private void createContent(WritableSheet sheet) throws Exception {
         // now a bit of text
-        for (int i = 12; i < 20; i++) {
-            // First column
-            addLabel(sheet, 0, i, "Boring text " + i);
-            // Second column
-            addLabel(sheet, 1, i, "Another text");
+        for (int i = 1; resultSet.next(); i++) {
+            addLabel(sheet, 0, i, resultSet.getString("NAME"));
+            addLabel(sheet, 1, i, resultSet.getString("DRINK"));
+            addLabel(sheet, 2, i, resultSet.getString("DRINKSHAD"));
+            addLabel(sheet, 3, i, resultSet.getString("ALCOHOLCONSUMED"));
         }
     }
 
