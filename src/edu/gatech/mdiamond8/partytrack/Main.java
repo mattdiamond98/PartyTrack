@@ -19,11 +19,13 @@ public class Main extends Application {
             if (args[0].equals("Delete")) {
                 try {
                     NetworkCode.deleteAttendees();
+                    NetworkCode.deleteDrinkOrderList();
                 } catch (Exception ex) {
 
                 }
                 try {
                     NetworkCode.makeAttendees();
+                    NetworkCode.makeDrinkOrderList();
                 } catch (Exception ex) {
                     ex.printStackTrace();
                     System.exit(69);
