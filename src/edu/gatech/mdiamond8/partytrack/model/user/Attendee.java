@@ -1,7 +1,7 @@
 package edu.gatech.mdiamond8.partytrack.model.user;
 
 import edu.gatech.mdiamond8.partytrack.model.Drink;
-
+import edu.gatech.mdiamond8.partytrack.model.Party;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,38 +10,47 @@ import java.util.List;
  *
  * Author Jordan Goldstein
  */
-public class Attendee extends User{
-    private String ID;
-    private String QRCode;
+public class Attendee extends User {
+    private String id;
+    private String qrCode;
     private int drinksHad;
     private double ouncesAHad;
     private List<Drink> drinksHadList = new ArrayList<>();
+    private Party partyAt;
 
 
     /**
      * Default Attendee Constructor
      */
     public Attendee() {
-        ID = "123456789";
-        QRCode = "";
+        id = "123456789";
+        qrCode = "";
         type = Types.Attendee;
         drinksHad = 0;
         ouncesAHad = 0;
+        partyAt = null;
     }
 
     /**
      * Custom Attendee Constructor
-     * @param ID the Gatech ID of the Attendee
-     * @param QRCode the Assigned QRCode of the Attendee
+     * @param id the Gatech id of the Attendee
+     * @param qrCode the Assigned qrCode of the Attendee
+     * @param partyAt the party the guest is attending
      */
-    public Attendee(String ID, String QRCode) {
-        this.QRCode = QRCode;
-        this.ID = ID;
+    public Attendee(String id, String qrCode, Party partyAt) {
+        this.qrCode = qrCode;
+        this.id = id;
         type = Types.Attendee;
         drinksHad = 0;
         ouncesAHad = 0;
+        this.partyAt = partyAt;
     }
 
+    /**
+     * Give a drink to the attendee
+     * updates their drinks had, ounces had, and drink list
+     * @param drink the drink to give them
+     */
     public void giveDrink(Drink drink) {
         drinksHad++;
         ouncesAHad += drink.getAAmount();
@@ -73,20 +82,20 @@ public class Attendee extends User{
     }
 
     /**
-     * Returns the GT ID
-     * @return GT ID
+     * Returns the GT id
+     * @return GT id
      */
-    public String getID() {
-        return ID;
+    public String getid() {
+        return id;
     }
 
     /**
      *
-     * Returns their QRCode String
-     * @return QRCode String
+     * Returns their qrCode String
+     * @return qrCode String
      */
-    public String getQRCode() {
-        return QRCode;
+    public String getqrCode() {
+        return qrCode;
     }
 
     /**
@@ -95,5 +104,22 @@ public class Attendee extends User{
      */
     public List<Drink> getDrinksHadList() {
         return drinksHadList;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (obj instanceof Attendee) {
+            Attendee other = (Attendee) obj;
+            if (this.id.equals(other.id)) {
+                if (this.partyAt.equals(other.partyAt)) {
+                    return true;
+                }
+            }
+
+        }
+        return false;
     }
 }
