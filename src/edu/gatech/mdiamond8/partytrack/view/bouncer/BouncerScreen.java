@@ -1,5 +1,6 @@
 package edu.gatech.mdiamond8.partytrack.view.bouncer;
 
+import edu.gatech.mdiamond8.partytrack.Network.NetworkCode;
 import edu.gatech.mdiamond8.partytrack.model.user.Attendee;
 import edu.gatech.mdiamond8.partytrack.qr.QRReader;
 import javafx.geometry.Insets;
@@ -53,6 +54,10 @@ public class BouncerScreen {
                 System.out.println(guest.getqrCode());
             });
             qrReader.start();
+            try {
+                NetworkCode.addGuest(guest);
+            } catch (Exception ex) {
+            }
         });
 
         Button btn2 = new Button("Cancel");
