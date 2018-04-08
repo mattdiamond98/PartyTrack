@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import edu.gatech.mdiamond8.partytrack.model.Party;
 import edu.gatech.mdiamond8.partytrack.model.user.Attendee;
 
 public class NetworkCode {
