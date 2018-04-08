@@ -1,5 +1,6 @@
 package edu.gatech.mdiamond8.partytrack.model;
 
+import edu.gatech.mdiamond8.partytrack.model.user.Attendee;
 import edu.gatech.mdiamond8.partytrack.model.user.Bartender;
 import edu.gatech.mdiamond8.partytrack.model.user.Bouncer;
 
@@ -15,6 +16,7 @@ public class Party {
     private List<Drink> drinkList = new ArrayList<Drink>();
     private List<Bouncer> bouncers = new ArrayList<>();
     private List<Bartender> bartenders = new ArrayList<>();
+    private List<Attendee> attendees = new ArrayList<>();
     private int drinkLimit;
     private String hostName;
 
@@ -59,6 +61,13 @@ public class Party {
     }
 
     /**
+     * Add a guest to the list of attendees
+     * @param guest the guest to add
+     */
+    public void addAttendee(Attendee guest) {
+        attendees.add(guest);
+    }
+    /**
      * Return the Host of the Party
      * @return party host
      */
@@ -88,6 +97,14 @@ public class Party {
      */
     public List<Bouncer> getBouncers() {
         return bouncers;
+    }
+
+    /**
+     * Get this list of current attendees
+     * @return the list of attendees
+     */
+    public List<Attendee> getAttendees() {
+        return attendees;
     }
 
     /**
