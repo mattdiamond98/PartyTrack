@@ -20,12 +20,14 @@ public class Main extends Application {
                 try {
                     NetworkCode.deleteAttendees();
                     NetworkCode.deleteDrinkOrderList();
+                    NetworkCode.deleteDrinksOrderedList();
                 } catch (Exception ex) {
 
                 }
                 try {
                     NetworkCode.makeAttendees();
                     NetworkCode.makeDrinkOrderList();
+                    NetworkCode.makeDrinksFilledList();
                 } catch (Exception ex) {
                     ex.printStackTrace();
                     System.exit(69);

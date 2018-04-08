@@ -20,6 +20,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
+import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 
@@ -69,7 +70,8 @@ public class BartenderScreen {
                     String name = row.getItem().getPersonName();
 
                     try {
-                        NetworkCode.removeDrinkOrder(name);
+                        ResultSet rs = NetworkCode.removeDrinkOrder(name);
+                        NetworkCode.addDrinkOrdered(rs);
                     } catch (Exception e) {
                         e.printStackTrace();
                     }

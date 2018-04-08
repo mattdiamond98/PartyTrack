@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
 
+import edu.gatech.mdiamond8.partytrack.model.Drink;
 import edu.gatech.mdiamond8.partytrack.model.Party;
 import edu.gatech.mdiamond8.partytrack.model.user.Attendee;
 import edu.gatech.mdiamond8.partytrack.view.bartender.DrinkOrder;
@@ -192,7 +193,7 @@ public class NetworkCode {
      * @param orderName the name of the order to remove
      * @throws Exception if the network fucks up
      */
-    public static void removeDrinkOrder(String orderName) throws Exception {
+    public static ResultSet removeDrinkOrder(String orderName) throws Exception {
         Connection connection;
         Statement stmt = null;
         String SQL;
@@ -205,11 +206,19 @@ public class NetworkCode {
         {
             throw new SQLException("Failed to create connection to database.", e);
         }
+        SQL = String.format("SELECT * FROM DrinkOrders WHERE name = '%s'", orderName);
+        stmt = connection.createStatement();
+        ResultSet rs = stmt.executeQuery(SQL);
         SQL = String.format("DELETE FROM DrinkOrders WHERE name = '%s'", orderName);
         stmt = connection.createStatement();
         stmt.execute(SQL);
+        return rs;
     }
 
+    /**
+     * Deletes the Drink order database
+     * @throws Exception if the network fucks up
+     */
     public static void deleteDrinkOrderList() throws Exception {
         Connection connection;
         Statement stmt = null;
@@ -224,6 +233,70 @@ public class NetworkCode {
             throw new SQLException("Failed to create connection to database.", e);
         }
         SQL = "DROP TABLE DrinkOrders";
+        stmt = connection.createStatement();
+        stmt.execute(SQL);
+    }
+
+    public static void makeDrinksFilledList() throws Exception {
+        Connection connection;
+        Statement stmt = null;
+        String SQL;
+        try
+        {
+            String url = String.format("jdbc:sqlserver://partypass.database.windows.net:1433;database=PartyPass;user=jewcubed@partypass;password={AEPi2017};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;");
+            connection = DriverManager.getConnection(url);
+        }
+        catch (SQLException e)
+        {
+            throw new SQLException("Failed to create connection to database.", e);
+        }
+        SQL = "CREATE TABLE DrinksOrdered (" +
+                "Name varchar(255), " +
+                "Drink text, " +
+                "DrinksHad int, " +
+                "AlcoholConsumed float)";
+        stmt = connection.createStatement();
+        stmt.execute(SQL);
+    }
+
+    public static void addDrinkOrdered(ResultSet rs) throws Exception {
+        Connection connection;
+        Statement stmt = null;
+        String SQL;
+        try
+        {
+            String url = String.format("jdbc:sqlserver://partypass.database.windows.net:1433;database=PartyPass;user=jewcubed@partypass;password={AEPi2017};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;");
+            connection = DriverManager.getConnection(url);
+        }
+        catch (SQLException e)
+        {
+            throw new SQLException("Failed to create connection to database.", e);
+        }
+        rs.next();
+        SQL = String.format("INSERT INTO DrinksOrdered VALUES ('%s', '%s', %d, %f)",
+                rs.getString("Name"),
+                rs.getString("Drink"),
+                rs.getInt("DrinksHad"),
+                rs.getDouble("AlcoholConsumed")
+        );
+        stmt = connection.createStatement();
+        stmt.execute(SQL);
+    }
+
+    public static void deleteDrinksOrderedList() throws Exception {
+        Connection connection;
+        Statement stmt = null;
+        String SQL;
+        try
+        {
+            String url = String.format("jdbc:sqlserver://partypass.database.windows.net:1433;database=PartyPass;user=jewcubed@partypass;password={AEPi2017};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;");
+            connection = DriverManager.getConnection(url);
+        }
+        catch (SQLException e)
+        {
+            throw new SQLException("Failed to create connection to database.", e);
+        }
+        SQL = "DROP TABLE DrinksOrdered";
         stmt = connection.createStatement();
         stmt.execute(SQL);
     }
