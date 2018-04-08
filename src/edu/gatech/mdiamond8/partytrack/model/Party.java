@@ -15,54 +15,26 @@ import java.util.*;
  * @author Jordan Goldstein
  */
 public class Party {
-    private List<Drink> drinkList = new ArrayList<>();
-    private List<Bouncer> bouncers = new ArrayList<>();
-    private List<Bartender> bartenders = new ArrayList<>();
-    private Map<String, Attendee> attendees = new HashMap<>();
-    private DrinkQueue drinkQueue = new DrinkQueue();
-    private int drinkLimit;
-    private String hostName;
+    private static List<Drink> drinkList = new ArrayList<>();
+    private static List<Bouncer> bouncers = new ArrayList<>();
+    private static List<Bartender> bartenders = new ArrayList<>();
+    private static Map<String, Attendee> attendees = new HashMap<>();
+    private static DrinkQueue drinkQueue = new DrinkQueue();
+    private static int drinkLimit;
+    private static String hostName;
 
     /**
      * Default Party Constructor
      * It's AEPi just servin hella beer
      */
-    public Party() {
+    static {
         addDefaultDrinks();
         hostName = "AEPi";
         drinkLimit = Integer.MAX_VALUE;
     }
 
-    /**
-     * Custom Party Constructor
-     * Adds Beer to drink List
-     * Creates a list of the qrcodes for the party
-     * @param hostName the Party Host
-     * @param drinkLimit the max amount of drinks someone can have
-     * @param fileName the name of the file containing all the qrCode strings
-     */
-    public Party(String hostName, int drinkLimit, String fileName) {
-        addDefaultDrinks();
-        this.hostName = hostName;
-        drinkList.add(new Drink());
-        this.drinkLimit = drinkLimit;
-        /**Deprecated
-         * try {
-            FileReader file = new FileReader("Resources/" + fileName);
-            qrFile = new BufferedReader(file);
-            String qrCode;
-            while ((qrCode = qrFile.readLine()) != null) {
-                codes.add(qrCode);
-            }
-            qrFile.close();
-        } catch (FileNotFoundException ex) {
-            System.exit(0);
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }*/
-    }
 
-    public void addDefaultDrinks() {
+    public static void addDefaultDrinks() {
         try {
             Scanner scan = new Scanner(new File("/default_drinks.txt"));
             while (scan.hasNextLine()) {
@@ -79,7 +51,7 @@ public class Party {
      * @param aContent the alcohol content of the drink
      * @param ounces the size of the drink
      */
-    public void addDrinkType(String name, double aContent, double ounces) {
+    public static void addDrinkType(String name, double aContent, double ounces) {
         addDrinkType(new Drink(aContent, name, ounces));
     }
 
@@ -87,7 +59,7 @@ public class Party {
      * Adds a drink to the drink list of the party
      * @param drink the drink to add
      */
-    public void addDrinkType(Drink drink) {
+    public static void addDrinkType(Drink drink) {
         drinkList.add(drink);
     }
 
@@ -96,14 +68,14 @@ public class Party {
      * Sorts the guest list by gtID
      * @param guest the guest to add
      */
-    public void addAttendee(Attendee guest) {
+    public static void addAttendee(Attendee guest) {
         attendees.put(guest.getqrCode(), guest);
     }
     /**
      * Return the Host of the Party
      * @return party host
      */
-    public String getHostName() {
+    public static String getHostName() {
         return hostName;
     }
 
@@ -111,7 +83,7 @@ public class Party {
      * Returns the list of drinks allowed at the party
      * @return the drink list
      */
-    public List<Drink> getDrinkList() {
+    public static List<Drink> getDrinkList() {
         return drinkList;
     }
 
@@ -119,7 +91,7 @@ public class Party {
      * Returns the list of approved Bartenders
      * @return bartenders list
      */
-    public List<Bartender> getBartenders() {
+    public static List<Bartender> getBartenders() {
         return bartenders;
     }
 
@@ -127,7 +99,7 @@ public class Party {
      * Returns the list of approved Bouncers
      * @return bouncers list
      */
-    public List<Bouncer> getBouncers() {
+    public static List<Bouncer> getBouncers() {
         return bouncers;
     }
 
@@ -135,7 +107,7 @@ public class Party {
      * Get this list of current attendees
      * @return the list of attendees
      */
-    public Map<String, Attendee> getAttendees() {
+    public static Map<String, Attendee> getAttendees() {
         return attendees;
     }
 
@@ -143,15 +115,15 @@ public class Party {
      * Returns the limit of drinks per person set by the host
      * @return drink limit
      */
-    public int getDrinkLimit() {
+    public static int getDrinkLimit() {
         return drinkLimit;
     }
 
-    public DrinkQueue getDrinkQueue() {
+    public static DrinkQueue getDrinkQueue() {
         return drinkQueue;
     }
 
-    public void setDrinkQueue(DrinkQueue drinkQueue) {
-        this.drinkQueue = drinkQueue;
+    public static void setDrinkQueue(DrinkQueue queue) {
+        drinkQueue = queue;
     }
 }
