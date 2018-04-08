@@ -22,7 +22,7 @@ public class Bouncer extends User {
      * @param gtID the GTID of the Guest
      */
     public void allowEntry(String gtID) {
-        String qrCode = "";
+        String qrCode = partyAt.getCode();
         Attendee newGuest = new Attendee(gtID, qrCode, partyAt);
         partyAt.addAttendee(newGuest);
     }
