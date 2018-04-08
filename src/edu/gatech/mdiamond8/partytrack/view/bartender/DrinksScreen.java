@@ -87,12 +87,13 @@ public class DrinksScreen {
                 guest.setDrinksHad(temp.getDrinksHad());
                 guest.setOuncesAHad(temp.getOuncesAHad());
             });
+            qrReader.start();
             try {
                 qrReader.t.join();
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
-            qrReader.start();
+            DrinkQueue.getCurrentOrders().add(new DrinkOrder(guest, new Drink()));
         });
         Button btn2 = new Button("Cancel");
         HBox hbBtn2 = new HBox(10);

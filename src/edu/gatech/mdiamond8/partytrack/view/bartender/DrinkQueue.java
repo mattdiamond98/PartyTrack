@@ -6,8 +6,8 @@ import java.util.List;
 
 public class DrinkQueue  {
 
-    private List<DrinkOrder> currentOrders;
-    private List<DrinkOrder> filledOrders;
+    private static List<DrinkOrder> currentOrders;
+    private static List<DrinkOrder> filledOrders;
 
     public DrinkQueue() {
         currentOrders = new LinkedList<>();
@@ -23,20 +23,20 @@ public class DrinkQueue  {
         }
     }
 
-    public List<DrinkOrder> getCurrentOrders() {
+    public static List<DrinkOrder> getCurrentOrders() {
         return currentOrders;
     }
 
-    public void setCurrentOrders(List<DrinkOrder> currentOrders) {
-        this.currentOrders = currentOrders;
+    public static void setCurrentOrders(List<DrinkOrder> currentOrders) {
+        currentOrders = currentOrders;
     }
 
-    public List<DrinkOrder> getFilledOrders() {
+    public static List<DrinkOrder> getFilledOrders() {
         return filledOrders;
     }
 
-    public void setFilledOrders(List<DrinkOrder> filledOrders) {
-        this.filledOrders = filledOrders;
+    public static void setFilledOrders(List<DrinkOrder> filledOrders) {
+        filledOrders = filledOrders;
     }
 
 }
