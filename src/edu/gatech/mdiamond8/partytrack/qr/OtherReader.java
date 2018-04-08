@@ -28,7 +28,7 @@ public class OtherReader {
             Result result = new MultiFormatReader().decode(bitmap);
             return result.getText();
         } catch (NotFoundException e) {
-            System.out.println("There is no QR code in the image");
+            System.out.println("There is no QR code in the Image");
             return null;
         }
     }
