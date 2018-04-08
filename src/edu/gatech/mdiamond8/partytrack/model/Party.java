@@ -20,17 +20,11 @@ public class Party {
     private static List<Bartender> bartenders = new ArrayList<>();
     private static Map<String, Attendee> attendees = new HashMap<>();
     private static DrinkQueue drinkQueue = new DrinkQueue();
-    private static int drinkLimit;
-    private static String hostName;
-
-    /**
-     * Default Party Constructor
-     * It's AEPi just servin hella beer
-     */
+    private static int drinkLimit = Integer.MAX_VALUE;;
+    private static String hostName = "AEPi";;
+    
     static {
         addDefaultDrinks();
-        hostName = "AEPi";
-        drinkLimit = Integer.MAX_VALUE;
     }
 
 
