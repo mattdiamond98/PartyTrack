@@ -73,8 +73,8 @@ public class ExcelWriter {
         // Write a few headers
         addCaption(sheet, 0, 0, "Name");
         addCaption(sheet, 1, 0, "Drink");
-        addCaption(sheet, 1, 0, "Prior Drinks");
-        addCaption(sheet, 1, 0, "Alcohol Consumed");
+        addCaption(sheet, 2, 0, "Prior Drinks");
+        addCaption(sheet, 3, 0, "Alcohol Consumed");
 
     }
 
