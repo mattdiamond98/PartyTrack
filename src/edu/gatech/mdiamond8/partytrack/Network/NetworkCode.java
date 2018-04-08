@@ -97,15 +97,21 @@ public class NetworkCode {
         SQL = String.format("SELECT * FROM Attendees WHERE code = '%s'", qr );
         stmt = connection.createStatement();
         ResultSet resultSet = stmt.executeQuery(SQL);
-        resultSet.next();
-        int id = resultSet.getInt("ID");
-        String name = resultSet.getString("Name");
-        String QR = resultSet.getString("code");
-        int dH = resultSet.getInt("had");
-        double oH = resultSet.getDouble("oHad");
-        SQL = String.format("DELETE FROM Attendees WHERE code = '%s'", qr );
-        stmt = connection.createStatement();
-        stmt.execute(SQL);
+        int id = 0;
+        String name = "Not Applicable";
+        String QR = null;
+        int dH = 0;
+        double oH = 0;
+        while (resultSet.next()) {
+            id = resultSet.getInt("ID");
+            name = resultSet.getString("Name");
+            QR = resultSet.getString("code");
+            dH = resultSet.getInt("had");
+            oH = resultSet.getDouble("oHad");
+            SQL = String.format("DELETE FROM Attendees WHERE code = '%s'", qr);
+            stmt = connection.createStatement();
+            stmt.execute(SQL);
+        }
         return new Attendee("" + id, QR, null, name);
     }
 }

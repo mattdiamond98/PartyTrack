@@ -6,15 +6,10 @@ import java.util.List;
 
 public class DrinkQueue  {
 
-    private static List<DrinkOrder> currentOrders;
-    private static List<DrinkOrder> filledOrders;
+    private static List<DrinkOrder> currentOrders = new LinkedList<>();
+    private static List<DrinkOrder> filledOrders = new LinkedList<>();
 
-    public DrinkQueue() {
-        currentOrders = new LinkedList<>();
-        filledOrders = new LinkedList<>();
-    }
     public DrinkQueue(Collection<DrinkOrder> current, Collection<DrinkOrder> filled) {
-        this();
         for (DrinkOrder order : current) {
             current.add(order);
         }
