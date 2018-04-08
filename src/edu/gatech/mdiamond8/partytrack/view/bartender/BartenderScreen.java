@@ -91,8 +91,6 @@ public class BartenderScreen {
             this.ouncesHad = ouncesHad;
         }
 
-
-
         public String getDrinkName() {
             return drinkName.get();
         }
