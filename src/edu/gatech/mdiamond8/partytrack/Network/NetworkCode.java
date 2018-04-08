@@ -16,7 +16,7 @@ public class NetworkCode {
         deleteAttendees();
         makeAttendees();
         addGuest(new Attendee());
-        getAttendee(123456789);
+        getAttendee("A");
     }
     public static void makeAttendees() throws Exception {
         Connection connection;
@@ -34,7 +34,7 @@ public class NetworkCode {
         SQL = "CREATE TABLE Attendees (" +
                 "ID int," +
                 "Name text," +
-                "code text," +
+                "code varchar(255)," +
                 "had int," +
                 "oHad int," +
                 "PRIMARY KEY (ID))";
@@ -81,7 +81,7 @@ public class NetworkCode {
         stmt = connection.createStatement();
         stmt.execute(SQL);
     }
-    public static Attendee getAttendee(int idNumber) throws Exception{
+    public static Attendee getAttendee(String qr) throws Exception{
         Connection connection;
         Statement stmt = null;
         String SQL;
@@ -94,7 +94,7 @@ public class NetworkCode {
         {
             throw new SQLException("Failed to create connection to database.", e);
         }
-        SQL = String.format("SELECT * FROM Attendees WHERE ID = %d", idNumber);
+        SQL = String.format("SELECT * FROM Attendees WHERE code = '%s'", qr );
         stmt = connection.createStatement();
         ResultSet resultSet = stmt.executeQuery(SQL);
         resultSet.next();
@@ -103,6 +103,9 @@ public class NetworkCode {
         String QR = resultSet.getString("code");
         int dH = resultSet.getInt("had");
         double oH = resultSet.getDouble("oHad");
+        SQL = String.format("DELETE FROM Attendees WHERE code = '%s'", qr );
+        stmt = connection.createStatement();
+        stmt.execute(SQL);
         return new Attendee("" + id, QR, null, name);
     }
 }
