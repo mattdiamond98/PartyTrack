@@ -20,7 +20,7 @@ import java.util.Map;
  * @author Jordan Goldstein
  */
 public class Party {
-    private List<Drink> drinkList = new ArrayList<Drink>();
+    private List<Drink> drinkList = new ArrayList<>();
     private List<Bouncer> bouncers = new ArrayList<>();
     private List<Bartender> bartenders = new ArrayList<>();
     private Map<String, Attendee> attendees = new HashMap<>();
