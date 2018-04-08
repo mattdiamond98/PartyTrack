@@ -1,7 +1,6 @@
 package edu.gatech.mdiamond8.partytrack.model.user;
 
 import edu.gatech.mdiamond8.partytrack.model.Drink;
-import edu.gatech.mdiamond8.partytrack.model.Party;
 
 import java.io.Serializable;
 import java.util.ArrayList;

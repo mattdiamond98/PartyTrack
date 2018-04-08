@@ -2,9 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48163fb2-5603-408c-add3-520a44c1ef37" name="Default" comment="only one party now for hackathon">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/PartyTrack.iml" afterPath="$PROJECT_DIR$/PartyTrack.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/out/production/PartyTrack/connectURL.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/PartyTrack/edu/gatech/mdiamond8/partytrack/Config.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/PartyTrack/edu/gatech/mdiamond8/partytrack/Main.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/PartyTrack/edu/gatech/mdiamond8/partytrack/Network/NetworkCode.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/PartyTrack/edu/gatech/mdiamond8/partytrack/model/Drink.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/PartyTrack/edu/gatech/mdiamond8/partytrack/model/Party.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/PartyTrack/edu/gatech/mdiamond8/partytrack/model/user/Attendee.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/PartyTrack/edu/gatech/mdiamond8/partytrack/model/user/Bartender.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/PartyTrack/edu/gatech/mdiamond8/partytrack/model/user/Bouncer.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/PartyTrack/edu/gatech/mdiamond8/partytrack/model/user/User$Types.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/PartyTrack/edu/gatech/mdiamond8/partytrack/model/user/User.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/PartyTrack/edu/gatech/mdiamond8/partytrack/qr/OtherReader.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/PartyTrack/edu/gatech/mdiamond8/partytrack/qr/QRImage.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/PartyTrack/edu/gatech/mdiamond8/partytrack/view/HomeScreen.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/PartyTrack/edu/gatech/mdiamond8/partytrack/view/LoginScreen.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/PartyTrack/edu/gatech/mdiamond8/partytrack/view/admin/AdminScreen.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/PartyTrack/edu/gatech/mdiamond8/partytrack/view/bartender/BartenderScreen$OrderData.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/PartyTrack/edu/gatech/mdiamond8/partytrack/view/bartender/BartenderScreen.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/PartyTrack/edu/gatech/mdiamond8/partytrack/view/bartender/DrinkOrder.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/PartyTrack/edu/gatech/mdiamond8/partytrack/view/bartender/DrinkQueue.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/PartyTrack/edu/gatech/mdiamond8/partytrack/view/bartender/DrinksScreen.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/PartyTrack/edu/gatech/mdiamond8/partytrack/view/bouncer/BouncerScreen.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/Network/NetworkCode.java" afterPath="$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/Network/NetworkCode.java" />
       <change beforePath="$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/Party.java" afterPath="$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/Party.java" />
+      <change beforePath="$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/user/Attendee.java" afterPath="$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/user/Attendee.java" />
+      <change beforePath="$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/user/Bouncer.java" afterPath="$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/user/Bouncer.java" />
+      <change beforePath="$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/user/User.java" afterPath="$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/user/User.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,8 +44,8 @@
       <file leaf-file-name="DrinksScreen.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/view/bartender/DrinksScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="745">
-              <caret line="46" column="35" lean-forward="true" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
+            <state relative-caret-position="1440">
+              <caret line="46" column="35" lean-forward="false" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -31,8 +56,8 @@
       <file leaf-file-name="AdminScreen.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/view/admin/AdminScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="240">
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -41,11 +66,10 @@
       <file leaf-file-name="BartenderScreen.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/view/bartender/BartenderScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="48" column="65" lean-forward="true" selection-start-line="48" selection-start-column="65" selection-end-line="48" selection-end-column="65" />
+            <state relative-caret-position="2304">
+              <caret line="48" column="65" lean-forward="false" selection-start-line="48" selection-start-column="65" selection-end-line="48" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#744#755#0" expanded="true" />
                 <element signature="e#3957#3958#0" expanded="true" />
                 <element signature="e#4003#4004#0" expanded="true" />
                 <element signature="e#4062#4063#0" expanded="true" />
@@ -78,8 +102,8 @@
       <file leaf-file-name="BouncerScreen.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/view/bouncer/BouncerScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+            <state relative-caret-position="1248">
+              <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -90,7 +114,7 @@
       <file leaf-file-name="LoginScreen.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/view/LoginScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="86">
+            <state relative-caret-position="1056">
               <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding />
             </state>
@@ -100,8 +124,8 @@
       <file leaf-file-name="HomeScreen.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/view/HomeScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-11">
-              <caret line="74" column="11" lean-forward="true" selection-start-line="74" selection-start-column="11" selection-end-line="74" selection-end-column="11" />
+            <state relative-caret-position="2784">
+              <caret line="74" column="11" lean-forward="false" selection-start-line="74" selection-start-column="11" selection-end-line="74" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -112,8 +136,8 @@
       <file leaf-file-name="Drink.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/Drink.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="556">
-              <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+            <state relative-caret-position="626">
+              <caret line="47" column="7" lean-forward="true" selection-start-line="47" selection-start-column="7" selection-end-line="47" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -122,31 +146,40 @@
       <file leaf-file-name="Party.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/Party.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="24" column="4" lean-forward="false" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+            <state relative-caret-position="1586">
+              <caret line="159" column="1" lean-forward="false" selection-start-line="159" selection-start-column="1" selection-end-line="159" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1772#1773#0" expanded="true" />
-                <element signature="e#1808#1809#0" expanded="true" />
-                <element signature="e#1995#1996#0" expanded="true" />
-                <element signature="e#2050#2051#0" expanded="true" />
-                <element signature="e#2169#2170#0" expanded="true" />
-                <element signature="e#2200#2201#0" expanded="true" />
-                <element signature="e#2349#2350#0" expanded="true" />
-                <element signature="e#2381#2382#0" expanded="true" />
-                <element signature="e#2528#2529#0" expanded="true" />
-                <element signature="e#2561#2562#0" expanded="true" />
-                <element signature="e#2700#2701#0" expanded="true" />
-                <element signature="e#2731#2732#0" expanded="true" />
-                <element signature="e#2884#2885#0" expanded="true" />
-                <element signature="e#2916#2917#0" expanded="true" />
-                <element signature="e#3062#3063#0" expanded="true" />
-                <element signature="e#3095#3096#0" expanded="true" />
-                <element signature="e#3143#3144#0" expanded="true" />
-                <element signature="e#3176#3177#0" expanded="true" />
-                <element signature="e#3234#3235#0" expanded="true" />
-                <element signature="e#3268#3269#0" expanded="true" />
+                <element signature="e#697#704#0" expanded="true" />
+                <element signature="e#2743#2744#0" expanded="true" />
+                <element signature="e#2779#2780#0" expanded="true" />
+                <element signature="e#2959#2960#0" expanded="true" />
+                <element signature="e#3014#3015#0" expanded="true" />
+                <element signature="e#3126#3127#0" expanded="true" />
+                <element signature="e#3157#3158#0" expanded="true" />
+                <element signature="e#3299#3300#0" expanded="true" />
+                <element signature="e#3331#3332#0" expanded="true" />
+                <element signature="e#3471#3472#0" expanded="true" />
+                <element signature="e#3504#3505#0" expanded="true" />
+                <element signature="e#3636#3637#0" expanded="true" />
+                <element signature="e#3667#3668#0" expanded="true" />
+                <element signature="e#3813#3814#0" expanded="true" />
+                <element signature="e#3845#3846#0" expanded="true" />
+                <element signature="e#3984#3985#0" expanded="true" />
+                <element signature="e#4017#4018#0" expanded="true" />
+                <element signature="e#4059#4060#0" expanded="true" />
+                <element signature="e#4101#4102#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Attendee.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/user/Attendee.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1359">
+              <caret line="38" column="46" lean-forward="false" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -223,8 +256,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -260,53 +295,12 @@
               <item name="PartyTrack" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="partytrack" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PartyTrack" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PartyTrack" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="partytrack" type="462c0819:PsiDirectoryNode" />
               <item name="qr" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PartyTrack" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PartyTrack" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="partytrack" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PartyTrack" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PartyTrack" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="partytrack" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PartyTrack" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PartyTrack" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="partytrack" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="bartender" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PartyTrack" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PartyTrack" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="partytrack" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="bouncer" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -315,184 +309,6 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/PartyTrack.iml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/Main.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/user/Bartender.java</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/enu/auth/x64/sqljdbc_auth.dll</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/enu/auth/x86/sqljdbc_auth.dll</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/enu/install.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/enu/license.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/enu/mssql-jdbc-6.4.0.jre7.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/enu/mssql-jdbc-6.4.0.jre8.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/enu/mssql-jdbc-6.4.0.jre9.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/enu/release.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/enu/samples/adaptive/executeStoredProcedure.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/enu/samples/adaptive/readLargeData.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/enu/samples/adaptive/updateLargeData.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/enu/samples/alwaysencrypted/AlwaysEncrypted.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/enu/samples/connections/connectDS.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/enu/samples/connections/connectURL.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/enu/samples/datatypes/basicDT.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/enu/samples/datatypes/sqlxmlExample.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/enu/samples/resultsets/cacheRS.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/enu/samples/resultsets/retrieveRS.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/enu/samples/resultsets/updateRS.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/enu/samples/sparse/SparseColumns.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/enu/thirdpartynotices.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/enu/xa/x64/sqljdbc_xa.dll</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/enu/xa/x86/sqljdbc_xa.dll</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/enu/xa/xa_install.sql</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/lib/abstract-jdbc-driver-0.5.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/lib/api-common-1.1.0.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/lib/auto-value-1.2.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/lib/commons-codec-1.3.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/lib/commons-logging-1.1.1.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/lib/firebase-admin-5.3.0.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/lib/gax-1.4.1.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/lib/google-api-client-1.22.0.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/lib/google-api-client-gson-1.22.0.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/lib/google-api-services-storage-v1-rev100-1.22.0.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/lib/google-auth-library-credentials-0.7.0.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/lib/google-auth-library-oauth2-http-0.7.0.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/lib/google-cloud-core-1.2.1.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/lib/google-cloud-core-http-1.2.1.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/lib/google-cloud-storage-1.2.1.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/lib/google-http-client-1.22.0.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/lib/google-http-client-appengine-1.21.0.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/lib/google-http-client-gson-1.22.0.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/lib/google-http-client-jackson-1.21.0.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/lib/google-http-client-jackson2-1.22.0.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/lib/google-oauth-client-1.22.0.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/lib/gson-2.1.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/lib/guava-20.0.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/lib/httpclient-4.0.1.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/lib/httpcore-4.0.1.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/lib/jackson-core-2.1.3.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/lib/jackson-core-asl-1.9.11.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/lib/joda-time-2.9.2.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/lib/json-20160810.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/lib/jsr305-1.3.9.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/lib/mysql-connector-java-5.1.34_1.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/lib/opencv-2.4.9-7.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/lib/org.apache.felix.ipojo.annotations-1.12.1.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/lib/proto-google-common-protos-0.1.12.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/lib/proto-google-iam-v1-0.1.12.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/lib/protobuf-java-3.3.0.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/lib/protobuf-java-util-3.3.0.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/lib/slf4j-api-1.7.25.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/lib/threetenbp-1.3.3.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/NetworkCode.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/connectURL.java</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/OnBarcode_BarcodeReader.xml</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -743,25 +559,23 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-18" y="-18" width="3876" height="2196" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24698134" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24698134" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15989584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16262136" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -772,7 +586,9 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -799,6 +615,102 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/view/bartender/DrinksScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1440">
+          <caret line="46" column="35" lean-forward="true" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/view/admin/AdminScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/view/bartender/BartenderScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2304">
+          <caret line="48" column="65" lean-forward="true" selection-start-line="48" selection-start-column="65" selection-end-line="48" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3957#3958#0" expanded="true" />
+            <element signature="e#4003#4004#0" expanded="true" />
+            <element signature="e#4062#4063#0" expanded="true" />
+            <element signature="e#4102#4103#0" expanded="true" />
+            <element signature="e#4156#4157#0" expanded="true" />
+            <element signature="e#4209#4210#0" expanded="true" />
+            <element signature="e#4250#4251#0" expanded="true" />
+            <element signature="e#4297#4298#0" expanded="true" />
+            <element signature="e#4357#4358#0" expanded="true" />
+            <element signature="e#4398#4399#0" expanded="true" />
+            <element signature="e#4454#4455#0" expanded="true" />
+            <element signature="e#4509#4510#0" expanded="true" />
+            <element signature="e#4549#4550#0" expanded="true" />
+            <element signature="e#4595#4596#0" expanded="true" />
+            <element signature="e#4654#4655#0" expanded="true" />
+            <element signature="e#4694#4695#0" expanded="true" />
+            <element signature="e#4748#4749#0" expanded="true" />
+            <element signature="e#4801#4802#0" expanded="true" />
+            <element signature="e#4841#4842#0" expanded="true" />
+            <element signature="e#4887#4888#0" expanded="true" />
+            <element signature="e#4946#4947#0" expanded="true" />
+            <element signature="e#4986#4987#0" expanded="true" />
+            <element signature="e#5040#5041#0" expanded="true" />
+            <element signature="e#5093#5094#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/view/bouncer/BouncerScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1248">
+          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/view/LoginScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1056">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/view/HomeScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2784">
+          <caret line="74" column="11" lean-forward="true" selection-start-line="74" selection-start-column="11" selection-end-line="74" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/Drink.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2448">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/Party.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1152">
+          <caret line="24" column="4" lean-forward="false" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/user/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -861,7 +773,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
           <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -885,18 +796,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/view/bartender/Bartender.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/view/bartender/Bartender.java" />
     <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/user/Bartender.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -917,18 +820,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/qr/Image.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/qr/Image.java" />
     <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/user/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -975,24 +870,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/view/LoginScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
+        <state relative-caret-position="1056">
           <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/Drink.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/view/bartender/DrinksScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="745">
-          <caret line="46" column="35" lean-forward="true" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
+        <state relative-caret-position="1440">
+          <caret line="46" column="35" lean-forward="false" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1003,7 +890,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
           <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1012,26 +898,25 @@
         <state relative-caret-position="231">
           <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#699#700#0" expanded="true" />
-            <element signature="e#735#736#0" expanded="true" />
-            <element signature="e#803#804#0" expanded="true" />
-            <element signature="e#853#854#0" expanded="true" />
-            <element signature="e#902#903#0" expanded="true" />
-            <element signature="e#937#938#0" expanded="true" />
-            <element signature="e#1003#1004#0" expanded="true" />
-            <element signature="e#1051#1052#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#699#700#0" expanded="false" />
+            <element signature="e#735#736#0" expanded="false" />
+            <element signature="e#803#804#0" expanded="false" />
+            <element signature="e#853#854#0" expanded="false" />
+            <element signature="e#902#903#0" expanded="false" />
+            <element signature="e#937#938#0" expanded="false" />
+            <element signature="e#1003#1004#0" expanded="false" />
+            <element signature="e#1051#1052#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/view/bartender/BartenderScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="48" column="65" lean-forward="true" selection-start-line="48" selection-start-column="65" selection-end-line="48" selection-end-column="65" />
+        <state relative-caret-position="2304">
+          <caret line="48" column="65" lean-forward="false" selection-start-line="48" selection-start-column="65" selection-end-line="48" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#744#755#0" expanded="true" />
             <element signature="e#3957#3958#0" expanded="true" />
             <element signature="e#4003#4004#0" expanded="true" />
             <element signature="e#4062#4063#0" expanded="true" />
@@ -1062,8 +947,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/view/HomeScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11">
-          <caret line="74" column="11" lean-forward="true" selection-start-line="74" selection-start-column="11" selection-end-line="74" selection-end-column="11" />
+        <state relative-caret-position="2784">
+          <caret line="74" column="11" lean-forward="false" selection-start-line="74" selection-start-column="11" selection-end-line="74" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1072,8 +957,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/view/bouncer/BouncerScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        <state relative-caret-position="1248">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1082,46 +967,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/view/admin/AdminScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="240">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/user/Attendee.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="39" column="54" lean-forward="false" selection-start-line="39" selection-start-column="54" selection-end-line="39" selection-end-column="54" />
+        <state relative-caret-position="1359">
+          <caret line="38" column="46" lean-forward="false" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/Drink.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="626">
+          <caret line="47" column="7" lean-forward="true" selection-start-line="47" selection-start-column="7" selection-end-line="47" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/gatech/mdiamond8/partytrack/model/Party.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="24" column="4" lean-forward="false" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+        <state relative-caret-position="1586">
+          <caret line="159" column="1" lean-forward="false" selection-start-line="159" selection-start-column="1" selection-end-line="159" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1772#1773#0" expanded="true" />
-            <element signature="e#1808#1809#0" expanded="true" />
-            <element signature="e#1995#1996#0" expanded="true" />
-            <element signature="e#2050#2051#0" expanded="true" />
-            <element signature="e#2169#2170#0" expanded="true" />
-            <element signature="e#2200#2201#0" expanded="true" />
-            <element signature="e#2349#2350#0" expanded="true" />
-            <element signature="e#2381#2382#0" expanded="true" />
-            <element signature="e#2528#2529#0" expanded="true" />
-            <element signature="e#2561#2562#0" expanded="true" />
-            <element signature="e#2700#2701#0" expanded="true" />
-            <element signature="e#2731#2732#0" expanded="true" />
-            <element signature="e#2884#2885#0" expanded="true" />
-            <element signature="e#2916#2917#0" expanded="true" />
-            <element signature="e#3062#3063#0" expanded="true" />
-            <element signature="e#3095#3096#0" expanded="true" />
-            <element signature="e#3143#3144#0" expanded="true" />
-            <element signature="e#3176#3177#0" expanded="true" />
-            <element signature="e#3234#3235#0" expanded="true" />
-            <element signature="e#3268#3269#0" expanded="true" />
+            <element signature="e#697#704#0" expanded="true" />
+            <element signature="e#2743#2744#0" expanded="true" />
+            <element signature="e#2779#2780#0" expanded="true" />
+            <element signature="e#2959#2960#0" expanded="true" />
+            <element signature="e#3014#3015#0" expanded="true" />
+            <element signature="e#3126#3127#0" expanded="true" />
+            <element signature="e#3157#3158#0" expanded="true" />
+            <element signature="e#3299#3300#0" expanded="true" />
+            <element signature="e#3331#3332#0" expanded="true" />
+            <element signature="e#3471#3472#0" expanded="true" />
+            <element signature="e#3504#3505#0" expanded="true" />
+            <element signature="e#3636#3637#0" expanded="true" />
+            <element signature="e#3667#3668#0" expanded="true" />
+            <element signature="e#3813#3814#0" expanded="true" />
+            <element signature="e#3845#3846#0" expanded="true" />
+            <element signature="e#3984#3985#0" expanded="true" />
+            <element signature="e#4017#4018#0" expanded="true" />
+            <element signature="e#4059#4060#0" expanded="true" />
+            <element signature="e#4101#4102#0" expanded="true" />
           </folding>
         </state>
       </provider>

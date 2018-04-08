@@ -1,14 +1,10 @@
 package edu.gatech.mdiamond8.partytrack.Network;
 
-import edu.gatech.mdiamond8.partytrack.model.Party;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Properties;
-import edu.gatech.mdiamond8.partytrack.model.*;
+
 import edu.gatech.mdiamond8.partytrack.model.user.Attendee;
 
 public class NetworkCode {

@@ -55,18 +55,18 @@ public class Party implements Serializable {
         this.drinkLimit = drinkLimit;
         /**Deprecated
          * try {
-            FileReader file = new FileReader("Resources/" + fileName);
-            qrFile = new BufferedReader(file);
-            String qrCode;
-            while ((qrCode = qrFile.readLine()) != null) {
-                codes.add(qrCode);
-            }
-            qrFile.close();
-        } catch (FileNotFoundException ex) {
-            System.exit(0);
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }*/
+         FileReader file = new FileReader("Resources/" + fileName);
+         qrFile = new BufferedReader(file);
+         String qrCode;
+         while ((qrCode = qrFile.readLine()) != null) {
+         codes.add(qrCode);
+         }
+         qrFile.close();
+         } catch (FileNotFoundException ex) {
+         System.exit(0);
+         } catch (IOException ex) {
+         ex.printStackTrace();
+         }*/
     }
 
     /**
@@ -152,9 +152,9 @@ public class Party implements Serializable {
      * @return the next qrCode
      */
     /**public String getCode() {
-        if (codes.size() == 0) {
-            return "Fuck we ran outta codes";
-        }
-        return codes.remove(codes.size());
-    }*/
+     if (codes.size() == 0) {
+     return "Fuck we ran outta codes";
+     }
+     return codes.remove(codes.size());
+     }*/
 }
