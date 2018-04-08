@@ -1,5 +1,6 @@
 package edu.gatech.mdiamond8.partytrack.view;
 
+import edu.gatech.mdiamond8.partytrack.Config;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -52,7 +53,7 @@ public class LoginScreen {
         grid.add(hbBtn, 1, 4);
 
         btn.setOnAction(e -> {
-            Scene scene = new Scene(HomeScreen.getParent(primaryStage), 300, 275);
+            Scene scene = new Scene(HomeScreen.getParent(primaryStage), Config.SCREEN_X, Config.SCREEN_Y);
             primaryStage.setScene(scene);
         });
         return grid;

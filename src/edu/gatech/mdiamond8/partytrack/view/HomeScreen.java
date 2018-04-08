@@ -31,6 +31,7 @@ package edu.gatech.mdiamond8.partytrack.view;
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
+import edu.gatech.mdiamond8.partytrack.Config;
 import edu.gatech.mdiamond8.partytrack.view.admin.AdminScreen;
 import edu.gatech.mdiamond8.partytrack.view.bartender.DrinksScreen;
 import javafx.geometry.Insets;
@@ -87,7 +88,7 @@ public class HomeScreen {
         hbBtn1.getChildren().add(bartenderButton);
         grid.add(hbBtn1, 1, 1);
         bartenderButton.setOnAction(e -> {
-            Scene scene = new Scene(HomeScreen.getParent(primaryStage), 400, 300);
+            Scene scene = new Scene(HomeScreen.getParent(primaryStage), Config.SCREEN_X, Config.SCREEN_Y);
             primaryStage.setScene(scene);
         });
 
@@ -97,7 +98,7 @@ public class HomeScreen {
         hbBtn2.getChildren().add(drinksButton);
         grid.add(hbBtn2, 1, 2);
         drinksButton.setOnAction(e -> {
-            Scene scene = new Scene(DrinksScreen.getParent(primaryStage), 400, 300);
+            Scene scene = new Scene(DrinksScreen.getParent(primaryStage), Config.SCREEN_X, Config.SCREEN_Y);
             primaryStage.setScene(scene);
         });
 
@@ -107,7 +108,7 @@ public class HomeScreen {
         hbBtn3.getChildren().add(bouncerButton);
         grid.add(hbBtn3, 1, 3);
         bouncerButton.setOnAction(e -> {
-            Scene scene = new Scene(DrinksScreen.getParent(primaryStage), 400, 300);
+            Scene scene = new Scene(DrinksScreen.getParent(primaryStage), Config.SCREEN_X, Config.SCREEN_Y);
             primaryStage.setScene(scene);
         });
 
@@ -117,7 +118,7 @@ public class HomeScreen {
         hbBtn4.getChildren().add(adminButton);
         grid.add(hbBtn4, 1, 4);
         adminButton.setOnAction(e -> {
-            Scene scene = new Scene(AdminScreen.getParent(primaryStage), 400, 300);
+            Scene scene = new Scene(AdminScreen.getParent(primaryStage), Config.SCREEN_X, Config.SCREEN_Y);
             primaryStage.setScene(scene);
         });
 

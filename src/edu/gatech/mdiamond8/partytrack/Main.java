@@ -5,6 +5,7 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+
 public class Main extends Application {
     public static void main(String[] args) {
         launch(args);
@@ -12,7 +13,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setTitle("JavaFX Welcome");
-        Scene scene = new Scene(LoginScreen.getParent(primaryStage), 300, 275);
+        Scene scene = new Scene(LoginScreen.getParent(primaryStage), Config.SCREEN_X, Config.SCREEN_Y);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
