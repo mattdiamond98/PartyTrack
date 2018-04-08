@@ -8,6 +8,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -83,10 +85,12 @@ public class Party {
 
     /**
      * Add a guest to the list of attendees
+     * Sorts the guest list by gtID
      * @param guest the guest to add
      */
     public void addAttendee(Attendee guest) {
         attendees.add(guest);
+        Collections.sort(attendees);
     }
     /**
      * Return the Host of the Party

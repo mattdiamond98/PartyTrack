@@ -10,7 +10,7 @@ import java.util.List;
  *
  * Author Jordan Goldstein
  */
-public class Attendee extends User {
+public class Attendee extends User implements Comparable {
     private String id;
     private String qrCode;
     private int drinksHad;
@@ -107,6 +107,9 @@ public class Attendee extends User {
     }
 
     @Override
+    /**
+     * Returns equal if id and current party are the same
+     */
     public boolean equals(Object obj) {
         if (obj == null) {
             return false;
@@ -121,5 +124,22 @@ public class Attendee extends User {
 
         }
         return false;
+    }
+
+    @Override
+    /**
+     * Sorts by GTID
+     */
+    public int compareTo(Object o) {
+        if (o == null) {
+            throw  new NullPointerException("Cannot Compare to null Object");
+        }
+        if (!(o instanceof Attendee)) {
+            throw new ClassCastException("Must compare to Attendee");
+        }
+        Attendee other = (Attendee) o;
+        int myID = Integer.parseInt(id);
+        int otherID = Integer.parseInt(other.getid());
+        return myID - otherID;
     }
 }
