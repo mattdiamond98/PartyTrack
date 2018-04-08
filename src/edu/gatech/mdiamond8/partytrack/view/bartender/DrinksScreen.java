@@ -99,6 +99,7 @@ public class DrinksScreen {
                     temp = new Attendee(null,null,null,null);
                     ex.printStackTrace();
                 }
+                System.out.println(temp.getqrCode());
                 guest.setCode(temp.getqrCode());
                 guest.setName(temp.getName());
                 guest.setId(temp.getid());
