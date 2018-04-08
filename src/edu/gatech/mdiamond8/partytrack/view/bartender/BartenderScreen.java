@@ -1,6 +1,7 @@
 package edu.gatech.mdiamond8.partytrack.view.bartender;
 
 import edu.gatech.mdiamond8.partytrack.Config;
+import edu.gatech.mdiamond8.partytrack.Network.NetworkCode;
 import edu.gatech.mdiamond8.partytrack.model.Drink;
 import edu.gatech.mdiamond8.partytrack.model.user.Attendee;
 import edu.gatech.mdiamond8.partytrack.view.HomeScreen;
@@ -67,8 +68,11 @@ public class BartenderScreen {
                 if (event.getClickCount() == 2 && (! row.isEmpty()) ) {
                     String name = row.getItem().getPersonName();
 
-
-                    //any code here @jordan
+                    try {
+                        NetworkCode.removeDrinkOrder(name);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
 
 
                     table.getItems().remove(row.getItem());

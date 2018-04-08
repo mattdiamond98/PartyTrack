@@ -112,11 +112,19 @@ public class DrinksScreen {
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
+            if (guest.getName().equals("Not Applicable")) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setContentText("Error: This QR Code is Not Registered");
+                alert.showAndWait()
+                        .filter(response -> response == ButtonType.OK);
+                return;
+            }
             DrinkQueue.getCurrentOrders().add(new DrinkOrder(guest, selected));
             guest.setDrinksHad(guest.getDrinksHad() + 1);
             guest.setOuncesAHad(guest.getOuncesAHad() + selected.getAAmount());
             try {
                 NetworkCode.addGuest(guest);
+                NetworkCode.addDrinkOrder(new DrinkOrder(guest, selected));
             } catch (Exception ex) {
                 ex.printStackTrace();
             }

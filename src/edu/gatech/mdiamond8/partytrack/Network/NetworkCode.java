@@ -148,10 +148,10 @@ public class NetworkCode {
             throw new SQLException("Failed to create connection to database.", e);
         }
         SQL = "CREATE TABLE DrinkOrders (" +
-                "Name text," +
-                "Drink text," +
-                "DrinksHad int" +
-                "AlcoholConsumed double)";
+                "Name varchar(255), " +
+                "Drink text, " +
+                "DrinksHad int, " +
+                "AlcoholConsumed float)";
         stmt = connection.createStatement();
         stmt.execute(SQL);
     }
@@ -187,6 +187,11 @@ public class NetworkCode {
         stmt.execute(SQL);
     }
 
+    /**
+     * Removes a drink order from the databse
+     * @param orderName the name of the order to remove
+     * @throws Exception if the network fucks up
+     */
     public static void removeDrinkOrder(String orderName) throws Exception {
         Connection connection;
         Statement stmt = null;
@@ -201,6 +206,24 @@ public class NetworkCode {
             throw new SQLException("Failed to create connection to database.", e);
         }
         SQL = String.format("DELETE FROM DrinkOrders WHERE name = '%s'", orderName);
+        stmt = connection.createStatement();
+        stmt.execute(SQL);
+    }
+
+    public static void deleteDrinkOrderList() throws Exception {
+        Connection connection;
+        Statement stmt = null;
+        String SQL;
+        try
+        {
+            String url = String.format("jdbc:sqlserver://partypass.database.windows.net:1433;database=PartyPass;user=jewcubed@partypass;password={AEPi2017};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;");
+            connection = DriverManager.getConnection(url);
+        }
+        catch (SQLException e)
+        {
+            throw new SQLException("Failed to create connection to database.", e);
+        }
+        SQL = "DROP TABLE DrinkOrders";
         stmt = connection.createStatement();
         stmt.execute(SQL);
     }
