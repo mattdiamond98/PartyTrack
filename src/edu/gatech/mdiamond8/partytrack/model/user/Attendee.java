@@ -123,6 +123,29 @@ public class Attendee extends User implements Comparable, Serializable {
         this.name = name;
     }
 
+    /**
+     * Set the id of the attendee
+     * @param id the id to assign
+     */
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    /**
+     * Sets the number of drinks the person has had
+     * @param drinks the number of drinks to assign them
+     */
+    public void setDrinksHad( int drinks) {
+        this.drinksHad = drinks;
+    }
+
+    /**
+     * Sets the ounces of alcohol a person has had
+     * @param ounces the amount of ounces to assign them
+     */
+    public void setOuncesAHad (double ounces) {
+        this.ouncesAHad = ounces;
+    }
     @Override
     /**
      * Returns equal if id and current party are the same

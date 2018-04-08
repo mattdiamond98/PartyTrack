@@ -1,5 +1,6 @@
 package edu.gatech.mdiamond8.partytrack.view.bartender;
 
+import edu.gatech.mdiamond8.partytrack.Network.NetworkCode;
 import edu.gatech.mdiamond8.partytrack.model.Drink;
 import edu.gatech.mdiamond8.partytrack.model.Party;
 import edu.gatech.mdiamond8.partytrack.model.user.Attendee;
@@ -71,7 +72,26 @@ public class DrinksScreen {
 
         Button btn1 = new Button("Scan Wristband");
         btn1.setOnAction(e -> { //scan wristband button
-            QRReader qrReader = new QRReader(x -> System.out.println(x));
+            Attendee guest = new Attendee(null,null,null,null);
+            QRReader qrReader = new QRReader(x -> {
+                Attendee temp;
+                try {
+                    temp = NetworkCode.getAttendee(x);
+                } catch (Exception ex) {
+                    temp = new Attendee(null,null,null,null);
+                    ex.printStackTrace();
+                }
+                guest.setCode(temp.getqrCode());
+                guest.setName(temp.getName());
+                guest.setId(temp.getid());
+                guest.setDrinksHad(temp.getDrinksHad());
+                guest.setOuncesAHad(temp.getOuncesAHad());
+            });
+            try {
+                qrReader.t.join();
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
             qrReader.start();
         });
         Button btn2 = new Button("Cancel");
