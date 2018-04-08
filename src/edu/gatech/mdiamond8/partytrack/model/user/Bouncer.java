@@ -1,7 +1,6 @@
 package edu.gatech.mdiamond8.partytrack.model.user;
 
 import edu.gatech.mdiamond8.partytrack.model.Party;
-
 /**
  * Represents a Bouncer
  *
@@ -21,8 +20,7 @@ public class Bouncer extends User {
      * Create an attendee object and add them to the list
      * @param gtID the GTID of the Guest
      */
-    public void allowEntry(String gtID) {
-        String qrCode = partyAt.getCode();
+    public void allowEntry(String gtID, String qrCode) {
         Attendee newGuest = new Attendee(gtID, qrCode, partyAt);
         partyAt.addAttendee(newGuest);
     }

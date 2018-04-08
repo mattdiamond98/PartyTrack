@@ -22,10 +22,10 @@ public class Party {
     private List<Bouncer> bouncers = new ArrayList<>();
     private List<Bartender> bartenders = new ArrayList<>();
     private List<Attendee> attendees = new ArrayList<>();
-    private List<String> codes = new ArrayList<>();
+    //private List<String> codes = new ArrayList<>(); Deprecated
     private int drinkLimit;
     private String hostName;
-    private BufferedReader qrFile;
+    //private BufferedReader qrFile; Deprecated
 
     /**
      * Default Party Constructor
@@ -35,7 +35,7 @@ public class Party {
         drinkList.add(new Drink());
         hostName = "AEPi";
         drinkLimit = Integer.MAX_VALUE;
-        qrFile = null;
+        //qrFile = null; Deprecated
     }
 
     /**
@@ -50,7 +50,8 @@ public class Party {
         this.hostName = hostName;
         drinkList.add(new Drink());
         this.drinkLimit = drinkLimit;
-        try {
+        /**Deprecated
+         * try {
             FileReader file = new FileReader("Resources/" + fileName);
             qrFile = new BufferedReader(file);
             String qrCode;
@@ -62,7 +63,7 @@ public class Party {
             System.exit(0);
         } catch (IOException ex) {
             ex.printStackTrace();
-        }
+        }*/
     }
 
     /**
@@ -141,13 +142,14 @@ public class Party {
     }
 
     /**
+     * DEPRECATED
      * Gets the next qrCode to assign
      * @return the next qrCode
      */
-    public String getCode() {
+    /**public String getCode() {
         if (codes.size() == 0) {
             return "Fuck we ran outta codes";
         }
         return codes.remove(codes.size());
-    }
+    }*/
 }
