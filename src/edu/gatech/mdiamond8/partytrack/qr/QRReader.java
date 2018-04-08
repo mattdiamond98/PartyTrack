@@ -23,7 +23,7 @@ public class QRReader implements Runnable {
      */
     public static volatile boolean coolRunning;
 
-    private Thread t;
+    public Thread t;
     private Consumer<String> function;
 
     /**

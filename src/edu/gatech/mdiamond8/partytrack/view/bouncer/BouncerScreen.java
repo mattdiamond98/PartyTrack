@@ -55,6 +55,11 @@ public class BouncerScreen {
             });
             qrReader.start();
             try {
+                qrReader.t.join();
+            } catch (Exception ex) {
+
+            }
+            try {
                 NetworkCode.addGuest(guest);
             } catch (Exception ex) {
                 ex.printStackTrace();
