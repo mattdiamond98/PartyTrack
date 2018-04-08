@@ -55,7 +55,6 @@ public class Drink {
 
     public static Drink parseString(String drink) {
         if (drink == null || drink.isEmpty()) throw new IllegalArgumentException();
-        drink = drink.replace(" ", "");
         String[] fields = drink.split(",");
         return new Drink(
                 Double.parseDouble(fields[0]),

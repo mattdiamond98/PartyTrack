@@ -28,7 +28,7 @@ public class Party {
      * It's AEPi just servin hella beer
      */
     public Party() {
-        drinkList.add(new Drink());
+        addDefaultDrinks();
         hostName = "AEPi";
         drinkLimit = Integer.MAX_VALUE;
     }
@@ -42,6 +42,7 @@ public class Party {
      * @param fileName the name of the file containing all the qrCode strings
      */
     public Party(String hostName, int drinkLimit, String fileName) {
+        addDefaultDrinks();
         this.hostName = hostName;
         drinkList.add(new Drink());
         this.drinkLimit = drinkLimit;
