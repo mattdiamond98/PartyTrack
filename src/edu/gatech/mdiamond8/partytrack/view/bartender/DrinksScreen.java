@@ -50,7 +50,7 @@ public class DrinksScreen {
         grid.add(hbBtn1, 1, 4);
 
         btn1.setOnAction(e -> { //scan wristband button
-            QRReader qrReader = new QRReader(QRImage.getImage(), x -> System.out.println(x));
+            QRReader qrReader = new QRReader(x -> System.out.println(x));
             qrReader.start();
         });
 

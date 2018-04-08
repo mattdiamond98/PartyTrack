@@ -27,11 +27,18 @@ public class QRReader implements Runnable {
     private BufferedImage qrCode;
     private Consumer<String> function;
 
-    public QRReader(BufferedImage image, Consumer<String> function) {
-        qrCode = image;
+    /**
+     * Constructor for QRReader.
+     *
+     * @param function function to apply the QR code to
+     */
+    public QRReader(Consumer<String> function) {
         this.function = function;
     }
 
+    /**
+     * Start running the thread.
+     */
     public void start() {
         if (t == null) {
             coolRunning = true;
@@ -49,6 +56,8 @@ public class QRReader implements Runnable {
     @Override
     public void run() {
         while (coolRunning) {
+            qrCode = QRImage.getImage();
+
             LuminanceSource source = new BufferedImageLuminanceSource(qrCode);
             BinaryBitmap bitmap = new BinaryBitmap(new HybridBinarizer(source));
 
@@ -63,8 +72,6 @@ public class QRReader implements Runnable {
                     System.out.println("Thread timed out.");
                 }
             }
-            System.out.println("hi");
-            qrCode = QRImage.getImage();
         }
     }
 }
