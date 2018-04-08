@@ -17,6 +17,7 @@ public class Attendee extends User implements Comparable {
     private double ouncesAHad;
     private List<Drink> drinksHadList = new ArrayList<>();
     private Party partyAt;
+    private String name;
 
 
     /**
@@ -29,6 +30,7 @@ public class Attendee extends User implements Comparable {
         drinksHad = 0;
         ouncesAHad = 0;
         partyAt = null;
+        name = "";
     }
 
     /**
@@ -44,6 +46,11 @@ public class Attendee extends User implements Comparable {
         drinksHad = 0;
         ouncesAHad = 0;
         this.partyAt = partyAt;
+    }
+
+    public Attendee(String id, String qrCode, Party partyAt, String name) {
+        this(id, qrCode, partyAt);
+        this.name = name;
     }
 
     /**
@@ -104,6 +111,14 @@ public class Attendee extends User implements Comparable {
      */
     public List<Drink> getDrinksHadList() {
         return drinksHadList;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override

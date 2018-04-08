@@ -28,7 +28,7 @@ public class Drink {
      */
     public Drink(double a, String n, double o) {
         aContent = a;
-        name = name;
+        name = n;
         ounces = 0;
     }
 

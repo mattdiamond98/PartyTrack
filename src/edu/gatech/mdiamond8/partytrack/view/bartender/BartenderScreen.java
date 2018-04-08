@@ -1,70 +1,145 @@
 package edu.gatech.mdiamond8.partytrack.view.bartender;
 
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
+import edu.gatech.mdiamond8.partytrack.model.Drink;
+import edu.gatech.mdiamond8.partytrack.model.user.Attendee;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.geometry.Insets;
+import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
-import javafx.scene.control.ListCell;
-import javafx.scene.control.ListView;
-import javafx.scene.layout.Priority;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
-import javafx.util.Callback;
 
-public class BartenderScreen  {
+public class BartenderScreen {
+
+    private static TableView<OrderData> table = new TableView<OrderData>();
+    private static final ObservableList<OrderData> data =
+            FXCollections.observableArrayList(
+                    genData(new DrinkOrder(new Attendee("randomid1432ew", "qrcode1245323d", null, "Matan Diamond"),
+                            new Drink(1, "Vodka Sprite", 8))),
+                    genData(new DrinkOrder(new Attendee("randomid7ytgfs", "qrcodehbt73esa", null, "Matthew Sklar"),
+                            new Drink(10, "Screwdriver, no OJ", 8))),
+                    genData(new DrinkOrder(new Attendee("randomid2908uf", "qrcode3fdsffsb", null, "Jordan Goldstein"),
+                            new Drink(0, "Virgin Rum and Coke", 8)))
+            );
 
     public static Parent getParent(Stage primaryStage) {
-        ListView<String> list = new ListView<String>();
-        ObservableList<String> data = FXCollections.observableArrayList(
-                "chocolate", "salmon", "gold", "coral", "darkorchid",
-                "darkgoldenrod", "lightsalmon", "black", "rosybrown", "blue",
-                "blueviolet", "brown");
-        final Label label = new Label();
+        Group group = new Group();
+        final Label label = new Label("Current Orders");
+        label.setFont(new Font("Arial", 20));
 
-        VBox box = new VBox();
-        box.getChildren().addAll(list, label);
-        VBox.setVgrow(list, Priority.ALWAYS);
+        table.setEditable(true);
 
-        label.setLayoutX(10);
-        label.setLayoutY(115);
-        label.setFont(Font.font("Verdana", 20));
+        TableColumn drinkNameCol = new TableColumn("Drink");
+        drinkNameCol.setMinWidth(300);
+        drinkNameCol.setCellValueFactory(
+                new PropertyValueFactory<OrderData, String>("drinkName"));
 
-        list.setItems(data);
+        TableColumn personNameCol = new TableColumn("Person");
+        personNameCol.setMinWidth(300);
+        personNameCol.setCellValueFactory(
+                new PropertyValueFactory<OrderData, String>("personName"));
 
-        list.setCellFactory(new Callback<ListView<String>,
-                                    ListCell<String>>() {
-                                @Override
-                                public ListCell<String> call(ListView<String> list) {
-                                    return new ColorRectCell();
-                                }
-                            }
-        );
+        TableColumn drinksHadCol = new TableColumn("Drinks Had");
+        drinksHadCol.setMinWidth(100);
+        drinksHadCol.setCellValueFactory(
+                new PropertyValueFactory<OrderData, String>("drinksHad"));
 
-        list.getSelectionModel().selectedItemProperty().addListener(
-                new ChangeListener<String>() {
-                    public void changed(ObservableValue<? extends String> ov,
-                                        String old_val, String new_val) {
-                        label.setText(new_val);
-                        label.setTextFill(Color.web(new_val));
-                    }
-                });
-        return box;
+        TableColumn ouncesHadCol = new TableColumn("Ounces Had");
+        ouncesHadCol.setMinWidth(100);
+        ouncesHadCol.setCellValueFactory(
+                new PropertyValueFactory<OrderData, String>("ouncesHad"));
+
+        table.setItems(data);
+        table.getColumns().addAll(drinkNameCol, personNameCol, drinksHadCol, ouncesHadCol);
+
+        final VBox vbox = new VBox();
+        vbox.setSpacing(5);
+        vbox.setPadding(new Insets(10, 0, 0, 10));
+        vbox.getChildren().addAll(label, table);
+
+        group.getChildren().addAll(vbox);
+        return group;
     }
 
-    static class ColorRectCell extends ListCell<String> {
-        @Override
-        public void updateItem(String item, boolean empty) {
-            super.updateItem(item, empty);
-            Rectangle rect = new Rectangle(100, 20);
-            if (item != null) {
-                rect.setFill(Color.web(item));
-                setGraphic(rect);
-            }
+    public static OrderData genData(DrinkOrder order) {
+        return new OrderData(
+                new SimpleStringProperty(order.getDrink().getName()),
+                new SimpleStringProperty(order.getAttendee().getName()),
+                new SimpleStringProperty(""+order.getAttendee().getDrinksHad()),
+                new SimpleStringProperty(""+order.getAttendee().getOuncesAHad()));
+    }
+
+    public static class OrderData {
+
+        private final SimpleStringProperty drinkName;
+        private final SimpleStringProperty personName;
+        private final SimpleStringProperty drinksHad;
+        private final SimpleStringProperty ouncesHad;
+
+        public OrderData(SimpleStringProperty drinkName, SimpleStringProperty personName,
+                         SimpleStringProperty drinksHad, SimpleStringProperty ouncesHad) {
+            this.drinkName = drinkName;
+            this.personName = personName;
+            this.drinksHad = drinksHad;
+            this.ouncesHad = ouncesHad;
         }
+
+
+
+        public String getDrinkName() {
+            return drinkName.get();
+        }
+
+        public SimpleStringProperty drinkNameProperty() {
+            return drinkName;
+        }
+
+        public void setDrinkName(String drinkName) {
+            this.drinkName.set(drinkName);
+        }
+
+        public String getPersonName() {
+            return personName.get();
+        }
+
+        public SimpleStringProperty personNameProperty() {
+            return personName;
+        }
+
+        public void setPersonName(String personName) {
+            this.personName.set(personName);
+        }
+
+        public String getDrinksHad() {
+            return drinksHad.get();
+        }
+
+        public SimpleStringProperty drinksHadProperty() {
+            return drinksHad;
+        }
+
+        public void setDrinksHad(String drinksHad) {
+            this.drinksHad.set(drinksHad);
+        }
+
+        public String getOuncesHad() {
+            return ouncesHad.get();
+        }
+
+        public SimpleStringProperty ouncesHadProperty() {
+            return ouncesHad;
+        }
+
+        public void setOuncesHad(String ouncesHad) {
+            this.ouncesHad.set(ouncesHad);
+        }
+
     }
 }

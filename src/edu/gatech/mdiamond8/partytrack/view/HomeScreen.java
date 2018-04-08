@@ -32,43 +32,22 @@ package edu.gatech.mdiamond8.partytrack.view;
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 import edu.gatech.mdiamond8.partytrack.Config;
-import edu.gatech.mdiamond8.partytrack.model.user.Bartender;
 import edu.gatech.mdiamond8.partytrack.view.admin.AdminScreen;
 import edu.gatech.mdiamond8.partytrack.view.bartender.BartenderScreen;
 import edu.gatech.mdiamond8.partytrack.view.bartender.DrinksScreen;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
-import javax.swing.*;
-
-/**
- *
- * Sample that shows how touch events can be used. UI contains four folders
- * and a row of blocks with a circle on one of the blocks. The folders
- * can be moved independently by touching one or more simultaneously
- * (number of folders that can be moved at one time can be limited by the
- * number of touch points the screen supports).
- * The circle can be moved from block to block by first touching the circle
- * and then touching an empty block. Jumping can continue until the finger
- * over the circle is removed.
- *
- */
 public class HomeScreen {
 
     public static Parent getParent(Stage primaryStage) {
