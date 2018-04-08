@@ -53,7 +53,7 @@ public class LoginScreen {
         grid.add(hbBtn, 1, 4);
 
         btn.setOnAction(e -> {
-            Scene scene = new Scene(HomeScreen.getParent(primaryStage), Config.SCREEN_X, Config.SCREEN_Y);
+            Scene scene = new Scene(HomeScreen.getParent(primaryStage), Config.SCREEN_X / 2, Config.SCREEN_Y / 2);
             primaryStage.setScene(scene);
         });
         return grid;

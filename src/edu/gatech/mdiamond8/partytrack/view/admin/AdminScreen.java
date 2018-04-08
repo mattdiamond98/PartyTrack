@@ -27,12 +27,13 @@ import java.util.List;
 
 public class AdminScreen {
 
-    private static TableView<DrinkData> table = new TableView<>();
-    private static final ObservableList<DrinkData> data =
-            FXCollections.observableArrayList(getData());
-    static final HBox hb = new HBox();
+
 
     public static Parent getParent(Stage primaryStage) {
+        TableView<DrinkData> table = new TableView<>();
+        final ObservableList<DrinkData> data =
+                FXCollections.observableArrayList(getData());
+        final HBox hb = new HBox();
         Group group = new Group();
 
         final Label label = new Label("Party Drinks");
@@ -105,7 +106,7 @@ public class AdminScreen {
 
         final Button backButton = new Button("Back");
         backButton.setOnAction(e -> {
-            Scene scene = new Scene(HomeScreen.getParent(primaryStage), Config.SCREEN_X, Config.SCREEN_Y);
+            Scene scene = new Scene(HomeScreen.getParent(primaryStage), Config.SCREEN_X / 2, Config.SCREEN_Y / 2);
             primaryStage.setScene(scene);
         });
 

@@ -35,7 +35,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setTitle("JavaFX Welcome");
-        Scene scene = new Scene(LoginScreen.getParent(primaryStage), Config.SCREEN_X, Config.SCREEN_Y);
+        Scene scene = new Scene(LoginScreen.getParent(primaryStage), Config.SCREEN_X / 2, Config.SCREEN_Y / 2);
         primaryStage.setScene(scene);
         primaryStage.show();
     }

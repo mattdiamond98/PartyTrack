@@ -82,7 +82,7 @@ public class BartenderScreen {
         vbox.setPadding(new Insets(10, 0, 0, 10));
         final Button backButton = new Button("Back");
         backButton.setOnAction(e -> {
-            Scene scene = new Scene(HomeScreen.getParent(primaryStage), Config.SCREEN_X, Config.SCREEN_Y);
+            Scene scene = new Scene(HomeScreen.getParent(primaryStage), Config.SCREEN_X / 2, Config.SCREEN_Y / 2);
             primaryStage.setScene(scene);
         });
         vbox.getChildren().addAll(label, table, backButton);
