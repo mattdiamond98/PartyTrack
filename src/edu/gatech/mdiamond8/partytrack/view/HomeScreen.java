@@ -32,7 +32,9 @@ package edu.gatech.mdiamond8.partytrack.view;
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 import edu.gatech.mdiamond8.partytrack.Config;
+import edu.gatech.mdiamond8.partytrack.model.user.Bartender;
 import edu.gatech.mdiamond8.partytrack.view.admin.AdminScreen;
+import edu.gatech.mdiamond8.partytrack.view.bartender.BartenderScreen;
 import edu.gatech.mdiamond8.partytrack.view.bartender.DrinksScreen;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -88,7 +90,7 @@ public class HomeScreen {
         hbBtn1.getChildren().add(bartenderButton);
         grid.add(hbBtn1, 1, 1);
         bartenderButton.setOnAction(e -> {
-            Scene scene = new Scene(HomeScreen.getParent(primaryStage), Config.SCREEN_X, Config.SCREEN_Y);
+            Scene scene = new Scene(BartenderScreen.getParent(primaryStage), Config.SCREEN_X, Config.SCREEN_Y);
             primaryStage.setScene(scene);
         });
 
