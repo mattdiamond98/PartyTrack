@@ -1,12 +1,15 @@
 package edu.gatech.mdiamond8.partytrack.model.user;
 
 import edu.gatech.mdiamond8.partytrack.model.Party;
+
+import java.io.Serializable;
+
 /**
  * Represents a Bouncer
  *
  * @author Jordan Goldstein
  */
-public class Bouncer extends User {
+public class Bouncer extends User implements Serializable {
     /**
      * Bouncer Constructor
      * @param p the party the bouncer is attending

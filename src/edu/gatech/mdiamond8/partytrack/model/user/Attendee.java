@@ -2,6 +2,8 @@ package edu.gatech.mdiamond8.partytrack.model.user;
 
 import edu.gatech.mdiamond8.partytrack.model.Drink;
 import edu.gatech.mdiamond8.partytrack.model.Party;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,7 +12,7 @@ import java.util.List;
  *
  * @author Jordan Goldstein
  */
-public class Attendee extends User implements Comparable {
+public class Attendee extends User implements Comparable, Serializable {
     private String id;
     private String qrCode;
     private int drinksHad;

@@ -1,11 +1,13 @@
 package edu.gatech.mdiamond8.partytrack.model;
 
+import java.io.Serializable;
+
 /**
  * Represents a drink
  *
  * @author Jordan Goldstein
  */
-public class Drink {
+public class Drink implements Serializable {
     private double aContent;
     private double ounces;
     private String name;

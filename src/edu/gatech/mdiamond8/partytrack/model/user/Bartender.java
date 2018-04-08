@@ -2,12 +2,14 @@ package edu.gatech.mdiamond8.partytrack.model.user;
 
 import edu.gatech.mdiamond8.partytrack.model.Drink;
 
+import java.io.Serializable;
+
 /**
  * Represents a Bartender
  *
  * Author Jordan Goldstein
  */
-public class Bartender extends User {
+public class Bartender extends User implements Serializable {
     /**
      * Bartender Constructor
      */

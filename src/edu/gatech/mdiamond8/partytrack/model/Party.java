@@ -7,6 +7,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -19,7 +20,7 @@ import java.util.Map;
  *
  * @author Jordan Goldstein
  */
-public class Party {
+public class Party implements Serializable {
     private List<Drink> drinkList = new ArrayList<Drink>();
     private List<Bouncer> bouncers = new ArrayList<>();
     private List<Bartender> bartenders = new ArrayList<>();
@@ -141,7 +142,10 @@ public class Party {
     public int getDrinkLimit() {
         return drinkLimit;
     }
-
+    @Override
+    public int hashCode() {
+        return hostName.hashCode();
+    }
     /**
      * DEPRECATED
      * Gets the next qrCode to assign
