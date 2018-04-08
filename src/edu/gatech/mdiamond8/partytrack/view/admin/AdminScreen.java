@@ -1,15 +1,17 @@
 package edu.gatech.mdiamond8.partytrack.view.admin;
 
+import edu.gatech.mdiamond8.partytrack.Config;
 import edu.gatech.mdiamond8.partytrack.model.Drink;
 import edu.gatech.mdiamond8.partytrack.model.Party;
+import edu.gatech.mdiamond8.partytrack.view.HomeScreen;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Group;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.TableColumn.CellEditEvent;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -29,7 +31,7 @@ public class AdminScreen {
             FXCollections.observableArrayList(getData());
     static final HBox hb = new HBox();
 
-    public static Parent getParent(Stage mainStage) {
+    public static Parent getParent(Stage primaryStage) {
         Group group = new Group();
 
         final Label label = new Label("Party Drinks");
@@ -86,16 +88,27 @@ public class AdminScreen {
 
         final Button addButton = new Button("Add");
         addButton.setOnAction(e -> {
+            Party.getDrinkList().add(new Drink(
+                    Double.parseDouble(addAlcohol.getText()),
+                    addName.getText(),
+                    Double.parseDouble(addOunces.getText())));
             data.add(new DrinkData(
                     addName.getText(),
                     addAlcohol.getText(),
                     addOunces.getText()));
+
             addName.clear();
             addAlcohol.clear();
             addOunces.clear();
         });
 
-        hb.getChildren().addAll(addName, addAlcohol, addOunces, addButton);
+        final Button backButton = new Button("Back");
+        backButton.setOnAction(e -> {
+            Scene scene = new Scene(HomeScreen.getParent(primaryStage), Config.SCREEN_X, Config.SCREEN_Y);
+            primaryStage.setScene(scene);
+        });
+
+        hb.getChildren().addAll(addName, addAlcohol, addOunces, addButton, backButton);
         hb.setSpacing(3);
 
         final VBox vbox = new VBox();
