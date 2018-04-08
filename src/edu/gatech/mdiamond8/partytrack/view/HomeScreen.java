@@ -49,7 +49,7 @@ import javafx.stage.Stage;
  * over the circle is removed.
  *
  */
-public class Home {
+public class HomeScreen {
 
     public static Parent getParent(Stage primaryStage) {
         Group root = new Group();

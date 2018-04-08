@@ -20,7 +20,7 @@ import javafx.stage.Stage;
 
 import static javafx.geometry.HPos.RIGHT;
 
-public class Login {
+public class LoginScreen {
 
     public static Parent getParent(Stage primaryStage) {
         GridPane grid = new GridPane();
@@ -63,7 +63,7 @@ public class Login {
             public void handle(ActionEvent e) {
                 actiontarget.setFill(Color.FIREBRICK);
                 actiontarget.setText("Sign in button pressed");
-                Scene scene = new Scene(Home.getParent(primaryStage), 300, 275);
+                Scene scene = new Scene(HomeScreen.getParent(primaryStage), 300, 275);
                 primaryStage.setScene(scene);
             }
         });
