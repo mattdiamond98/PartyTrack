@@ -283,6 +283,10 @@ public class NetworkCode {
         stmt.execute(SQL);
     }
 
+    /**
+     * Deletes the list of ordered drinks
+     * @throws Exception if the network fucks up
+     */
     public static void deleteDrinksOrderedList() throws Exception {
         Connection connection;
         Statement stmt = null;
@@ -299,5 +303,29 @@ public class NetworkCode {
         SQL = "DROP TABLE DrinksOrdered";
         stmt = connection.createStatement();
         stmt.execute(SQL);
+    }
+
+    /**
+     * Returns the resultset of the ordered drinks
+     * @return resultset of ordered drinks
+     * @throws Exception if the network fucks up
+     */
+    public static ResultSet getDrinksOrdered() throws Exception {
+        Connection connection;
+        Statement stmt = null;
+        String SQL;
+        try
+        {
+            String url = String.format("jdbc:sqlserver://partypass.database.windows.net:1433;database=PartyPass;user=jewcubed@partypass;password={AEPi2017};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;");
+            connection = DriverManager.getConnection(url);
+        }
+        catch (SQLException e)
+        {
+            throw new SQLException("Failed to create connection to database.", e);
+        }
+        SQL = "SELECT * FROM DrinksOrdered";
+        stmt = connection.createStatement();
+        ResultSet toReturn = stmt.executeQuery(SQL);
+        return toReturn;
     }
 }
