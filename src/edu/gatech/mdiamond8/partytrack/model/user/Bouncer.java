@@ -4,7 +4,7 @@ import edu.gatech.mdiamond8.partytrack.model.Party;
 /**
  * Represents a Bouncer
  *
- * Author Jordan Goldstein
+ * @author Jordan Goldstein
  */
 public class Bouncer extends User {
     /**

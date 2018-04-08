@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Represents a part attendee
  *
- * Author Jordan Goldstein
+ * @author Jordan Goldstein
  */
 public class Attendee extends User implements Comparable {
     private String id;

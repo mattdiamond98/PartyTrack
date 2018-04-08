@@ -5,7 +5,7 @@ import edu.gatech.mdiamond8.partytrack.model.Party;
 /**
  * Represents a generic User
  *
- * Author Jordan Goldstein
+ * @author Jordan Goldstein
  */
 public abstract class User {
     enum Types { Attendee, Bouncer, Bartender };

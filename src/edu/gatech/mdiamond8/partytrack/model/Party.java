@@ -17,7 +17,7 @@ import java.util.Map;
 /**
  * Represents the Party
  *
- * Author Jordan Goldstein
+ * @author Jordan Goldstein
  */
 public class Party {
     private List<Drink> drinkList = new ArrayList<Drink>();
