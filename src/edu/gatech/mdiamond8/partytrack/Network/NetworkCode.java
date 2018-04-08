@@ -148,7 +148,7 @@ public class NetworkCode {
             throw new SQLException("Failed to create connection to database.", e);
         }
         SQL = "CREATE TABLE DrinkOrders (" +
-                "Name text, " +
+                "Name varchar(255), " +
                 "Drink text, " +
                 "DrinksHad int, " +
                 "AlcoholConsumed float)";
