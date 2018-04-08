@@ -53,7 +53,7 @@ public class Drink {
         return name;
     }
 
-    public Drink parseString(String drink) {
+    public static Drink parseString(String drink) {
         if (drink == null || drink.isEmpty()) throw new IllegalArgumentException();
         drink = drink.replace(" ", "");
         String[] fields = drink.split(",");

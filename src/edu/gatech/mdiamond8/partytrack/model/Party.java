@@ -5,10 +5,9 @@ import edu.gatech.mdiamond8.partytrack.model.user.Bartender;
 import edu.gatech.mdiamond8.partytrack.model.user.Bouncer;
 import edu.gatech.mdiamond8.partytrack.view.bartender.DrinkQueue;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.io.File;
+import java.io.IOException;
+import java.util.*;
 
 /**
  * Represents the Party
@@ -32,7 +31,6 @@ public class Party {
         drinkList.add(new Drink());
         hostName = "AEPi";
         drinkLimit = Integer.MAX_VALUE;
-        //qrFile = null; Deprecated
     }
 
     /**
@@ -61,6 +59,17 @@ public class Party {
         } catch (IOException ex) {
             ex.printStackTrace();
         }*/
+    }
+
+    public void addDefaultDrinks() {
+        try {
+            Scanner scan = new Scanner(new File("/default_drinks.txt"));
+            while (scan.hasNextLine()) {
+                drinkList.add(Drink.parseString(scan.nextLine()));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
