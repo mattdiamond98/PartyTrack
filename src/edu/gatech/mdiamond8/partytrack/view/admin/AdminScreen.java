@@ -1,6 +1,7 @@
 package edu.gatech.mdiamond8.partytrack.view.admin;
 
 import edu.gatech.mdiamond8.partytrack.Config;
+import edu.gatech.mdiamond8.partytrack.excel.ExcelWriter;
 import edu.gatech.mdiamond8.partytrack.model.Drink;
 import edu.gatech.mdiamond8.partytrack.model.Party;
 import edu.gatech.mdiamond8.partytrack.view.HomeScreen;
@@ -21,7 +22,9 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
+import jxl.write.WriteException;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -110,7 +113,19 @@ public class AdminScreen {
             primaryStage.setScene(scene);
         });
 
-        hb.getChildren().addAll(addName, addAlcohol, addOunces, addButton, backButton);
+
+        final Button exportButton = new Button("Export Data to File");
+        exportButton.setOnAction(e -> {
+            ExcelWriter test = new ExcelWriter();
+            test.setOutputFile("Resources/data.xls");
+            try {
+                test.write();
+            } catch (WriteException | IOException ex) {
+                ex.printStackTrace();
+            }
+        });
+
+        hb.getChildren().addAll(addName, addAlcohol, addOunces, addButton, exportButton, backButton);
         hb.setSpacing(3);
 
         final VBox vbox = new VBox();
