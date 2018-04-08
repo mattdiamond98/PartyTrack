@@ -35,6 +35,7 @@ import edu.gatech.mdiamond8.partytrack.Config;
 import edu.gatech.mdiamond8.partytrack.view.admin.AdminScreen;
 import edu.gatech.mdiamond8.partytrack.view.bartender.BartenderScreen;
 import edu.gatech.mdiamond8.partytrack.view.bartender.DrinksScreen;
+import edu.gatech.mdiamond8.partytrack.view.bouncer.BouncerScreen;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
@@ -89,7 +90,7 @@ public class HomeScreen {
         hbBtn3.getChildren().add(bouncerButton);
         grid.add(hbBtn3, 1, 3);
         bouncerButton.setOnAction(e -> {
-            Scene scene = new Scene(DrinksScreen.getParent(primaryStage), Config.SCREEN_X, Config.SCREEN_Y);
+            Scene scene = new Scene(BouncerScreen.getParent(primaryStage), Config.SCREEN_X, Config.SCREEN_Y);
             primaryStage.setScene(scene);
         });
 

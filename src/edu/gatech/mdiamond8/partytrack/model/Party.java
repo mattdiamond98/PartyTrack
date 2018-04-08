@@ -5,13 +5,7 @@ import edu.gatech.mdiamond8.partytrack.model.user.Bartender;
 import edu.gatech.mdiamond8.partytrack.model.user.Bouncer;
 import edu.gatech.mdiamond8.partytrack.view.bartender.DrinkQueue;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -27,7 +21,6 @@ public class Party {
     private List<Bartender> bartenders = new ArrayList<>();
     private Map<String, Attendee> attendees = new HashMap<>();
     private DrinkQueue drinkQueue = new DrinkQueue();
-
     private int drinkLimit;
     private String hostName;
 
