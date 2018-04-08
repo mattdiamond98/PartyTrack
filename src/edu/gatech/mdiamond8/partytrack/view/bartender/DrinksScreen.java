@@ -1,6 +1,6 @@
 package edu.gatech.mdiamond8.partytrack.view.bartender;
 
-import edu.gatech.mdiamond8.partytrack.qr.OtherReader;
+import edu.gatech.mdiamond8.partytrack.qr.QRReader;
 import edu.gatech.mdiamond8.partytrack.qr.QRImage;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -50,11 +50,8 @@ public class DrinksScreen {
         grid.add(hbBtn1, 1, 4);
 
         btn1.setOnAction(e -> { //scan wristband button
-            try {
-                System.out.println(OtherReader.decode(QRImage.getImage()));
-            } catch (IOException ex){
-                System.out.println(ex);
-            }
+            QRReader qrReader = new QRReader(QRImage.getImage(), x -> System.out.println(x));
+            qrReader.start();
         });
 
         Button btn2 = new Button("Cancel");
@@ -64,7 +61,7 @@ public class DrinksScreen {
         grid.add(hbBtn2, 1, 5);
 
         btn2.setOnAction(e -> { //cancel button
-
+            QRReader.coolRunning = false;
         });
         return grid;
 
