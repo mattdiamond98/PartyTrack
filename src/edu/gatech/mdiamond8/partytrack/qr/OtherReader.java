@@ -23,12 +23,14 @@ public class OtherReader {
     public static String decode(BufferedImage qrCode) throws IOException {
         LuminanceSource source = new BufferedImageLuminanceSource(qrCode);
         BinaryBitmap bitmap = new BinaryBitmap(new HybridBinarizer(source));
+        ImageIO.write(qrCode, "PNG", new File("hello-world.png"));
 
         try {
             Result result = new MultiFormatReader().decode(bitmap);
             return result.getText();
         } catch (NotFoundException e) {
-            System.out.println("There is no QR code in the Image");
+            decode(qrCode);
+            System.out.println("Failed to find QR Code.");
             return null;
         }
     }
