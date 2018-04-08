@@ -10,14 +10,18 @@ import java.io.IOException;
 /**
  * Reads a QRCcode
  *
- * Author Jordan Goldstein
+ * @author Jordan Goldstein
  * With help from callicoder.com
  */
 public class OtherReader {
-
-    public static String decode(File qrCode) throws IOException {
-        BufferedImage bufferedImage = ImageIO.read(qrCode);
-        LuminanceSource source = new BufferedImageLuminanceSource(bufferedImage);
+    /**
+     * Decodes a String fromm a qrcode image
+     * @param qrCode the qrCode image
+     * @return the decoded qrcode
+     * @throws IOException if there is no qrcode
+     */
+    public static String decode(BufferedImage qrCode) throws IOException {
+        LuminanceSource source = new BufferedImageLuminanceSource(qrCode);
         BinaryBitmap bitmap = new BinaryBitmap(new HybridBinarizer(source));
 
         try {
