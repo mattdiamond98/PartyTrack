@@ -1,7 +1,5 @@
 package edu.gatech.mdiamond8.partytrack.model.user;
 
-import edu.gatech.mdiamond8.partytrack.model.Party;
-
 /**
  * Represents a generic User
  *
