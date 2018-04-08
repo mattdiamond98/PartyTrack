@@ -24,7 +24,6 @@ public class QRReader implements Runnable {
     public static volatile boolean coolRunning;
 
     private Thread t;
-    private BufferedImage qrCode;
     private Consumer<String> function;
 
     /**
@@ -56,7 +55,7 @@ public class QRReader implements Runnable {
     @Override
     public void run() {
         while (coolRunning) {
-            qrCode = QRImage.getImage();
+            BufferedImage qrCode = QRImage.getImage();
 
             LuminanceSource source = new BufferedImageLuminanceSource(qrCode);
             BinaryBitmap bitmap = new BinaryBitmap(new HybridBinarizer(source));
@@ -65,6 +64,7 @@ public class QRReader implements Runnable {
                 Result result = new MultiFormatReader().decode(bitmap);
 
                 function.accept(result.getText());
+                coolRunning = false;
             } catch (NotFoundException ex) {
                 try {
                     Thread.sleep(10);
