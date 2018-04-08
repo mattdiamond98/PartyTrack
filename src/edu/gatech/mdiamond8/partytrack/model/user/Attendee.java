@@ -27,12 +27,12 @@ public class Attendee extends User implements Comparable, Serializable {
      */
     public Attendee() {
         id = "123456789";
-        qrCode = "";
+        qrCode = "A";
         type = Types.Attendee;
         drinksHad = 0;
         ouncesAHad = 0;
         partyAt = null;
-        name = "";
+        name = "Bob";
     }
 
     /**
@@ -158,5 +158,9 @@ public class Attendee extends User implements Comparable, Serializable {
         int myID = Integer.parseInt(id);
         int otherID = Integer.parseInt(other.getid());
         return myID - otherID;
+    }
+
+    public void setCode(String code) {
+        this.qrCode = code;
     }
 }

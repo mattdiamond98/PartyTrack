@@ -27,5 +27,34 @@
     </orderEntry>
     <orderEntry type="library" name="webcam-capture-0.3.12" level="project" />
     <orderEntry type="library" name="bridj-0.7.0" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/mysql-connector-java-5.1.46" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/mysql-connector-java-5.1.46/src" />
+        </SOURCES>
+        <jarDirectory url="file://$MODULE_DIR$/mysql-connector-java-5.1.46" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/enu" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/enu/samples/adaptive" />
+          <root url="file://$MODULE_DIR$/enu/samples/alwaysencrypted" />
+          <root url="file://$MODULE_DIR$/enu/samples/connections" />
+          <root url="file://$MODULE_DIR$/enu/samples/datatypes" />
+          <root url="file://$MODULE_DIR$/enu/samples/resultsets" />
+          <root url="file://$MODULE_DIR$/enu/samples/sparse" />
+        </SOURCES>
+        <jarDirectory url="file://$MODULE_DIR$/enu" recursive="false" />
+      </library>
+    </orderEntry>
   </component>
 </module>

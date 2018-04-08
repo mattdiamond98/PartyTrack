@@ -35,4 +35,7 @@ public class Bouncer extends User implements Serializable {
         Attendee newGuest = new Attendee(gtID, qrCode, partyAt);
         partyAt.addAttendee(newGuest);
     }
+    public Attendee makeHalfGuest(String gtID, String name) {
+        return new Attendee(gtID, "", partyAt, name);
+    }
 }
