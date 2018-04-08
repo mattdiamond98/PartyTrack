@@ -15,7 +15,7 @@ import edu.gatech.mdiamond8.partytrack.view.bartender.DrinkOrder;
 public class NetworkCode {
     /**
      * Creates a table of attendess in the database
-     * @throws Exception If the Network fucks up
+     * @throws Exception If the Network messes up
      */
     public static void makeAttendees() throws Exception {
         Connection connection;
@@ -43,7 +43,7 @@ public class NetworkCode {
 
     /**
      * Deletes the table of attendees in the party database
-     * @throws Exception if the network fucks up
+     * @throws Exception if the network messes up
      */
     public static void deleteAttendees() throws Exception {
         Connection connection;
@@ -66,7 +66,7 @@ public class NetworkCode {
     /**
      * Adds a guest to the table of attendees
      * @param guest the guest to add
-     * @throws Exception if the network fucks up
+     * @throws Exception if the network messes up
      */
     public static void addGuest(Attendee guest) throws Exception {
         Connection connection;
@@ -95,7 +95,7 @@ public class NetworkCode {
      * Pull an attendee from the database
      * @param qr the qr code of the attendee
      * @return the attendee
-     * @throws Exception If the network fucks up
+     * @throws Exception If the network messes up
      */
     public static Attendee getAttendee(String qr) throws Exception{
         Connection connection;
@@ -135,7 +135,7 @@ public class NetworkCode {
      * Finds and returns a guest based on their name
      * @param n the guest's name
      * @return the attendee object
-     * @throws Exception if the network fucks up
+     * @throws Exception if the network messes up
      */
     public static Attendee getAttendeeByName(String n) throws Exception{
         Connection connection;
@@ -172,7 +172,7 @@ public class NetworkCode {
     }
     /**
      * Creates a drink table in the database
-     * @throws Exception if the network fucks up
+     * @throws Exception if the network messes up
      */
     public static void makeDrinkOrderList() throws Exception {
         Connection connection;
@@ -199,7 +199,7 @@ public class NetworkCode {
     /**
      * Adds a drink order to the database
      * @param drinkOrder the order to add
-     * @throws Exception if the network fucks up
+     * @throws Exception if the network messes up
      */
     public static void addDrinkOrder(DrinkOrder drinkOrder) throws Exception {
         Connection connection;
@@ -230,7 +230,7 @@ public class NetworkCode {
     /**
      * Removes a drink order from the databse
      * @param orderName the name of the order to remove
-     * @throws Exception if the network fucks up
+     * @throws Exception if the network messes up
      */
     public static ResultSet removeDrinkOrder(String orderName) throws Exception {
         Connection connection;
@@ -256,7 +256,7 @@ public class NetworkCode {
 
     /**
      * Deletes the Drink order database
-     * @throws Exception if the network fucks up
+     * @throws Exception if the network messes up
      */
     public static void deleteDrinkOrderList() throws Exception {
         Connection connection;
@@ -278,7 +278,7 @@ public class NetworkCode {
 
     /**
      * Makes a database of filled drinks
-     * @throws Exception if the network fucks up
+     * @throws Exception if the network messes up
      */
     public static void makeDrinksFilledList() throws Exception {
         Connection connection;
@@ -305,7 +305,7 @@ public class NetworkCode {
     /**
      * Adds a drink to the drink ordered database
      * @param rs the resultset of a remove drink query
-     * @throws Exception if the network fucks up
+     * @throws Exception if the network messes up
      */
     public static void addDrinkOrdered(ResultSet rs) throws Exception {
         Connection connection;
@@ -333,7 +333,7 @@ public class NetworkCode {
 
     /**
      * Deletes the list of ordered drinks
-     * @throws Exception if the network fucks up
+     * @throws Exception if the network messes up
      */
     public static void deleteDrinksOrderedList() throws Exception {
         Connection connection;
@@ -356,7 +356,7 @@ public class NetworkCode {
     /**
      * Returns the resultset of the ordered drinks
      * @return resultset of ordered drinks
-     * @throws Exception if the network fucks up
+     * @throws Exception if the network messes up
      */
     public static ResultSet getDrinksOrdered() throws Exception {
         Connection connection;
@@ -380,7 +380,7 @@ public class NetworkCode {
     /**
      * Gets the currentdrink orders
      * @return the current drink orders database
-     * @throws Exception if the network fucks up
+     * @throws Exception if the network messes up
      */
     public static ResultSet getDrinkOrders() throws Exception {
         Connection connection;
