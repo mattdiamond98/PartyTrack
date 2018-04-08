@@ -15,16 +15,20 @@ import java.sql.Statement;
 
 public class Main extends Application {
     public static void main(String[] args) throws IOException {
-        try {
-            NetworkCode.deleteAttendees();
-        } catch (Exception ex) {
+        if (args.length == 1) {
+            if (args[0].equals("Delete")) {
+                try {
+                    NetworkCode.deleteAttendees();
+                } catch (Exception ex) {
 
-        }
-        try {
-            NetworkCode.makeAttendees();
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            System.exit(69);
+                }
+                try {
+                    NetworkCode.makeAttendees();
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                    System.exit(69);
+                }
+            }
         }
         launch(args);
     }
