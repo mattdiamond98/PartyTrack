@@ -67,7 +67,7 @@ public class BartenderScreen {
                 if (event.getClickCount() == 2 && (! row.isEmpty()) ) {
                     String name = row.getItem().getPersonName();
 
-                    
+
                     //any code here @jordan
 
 

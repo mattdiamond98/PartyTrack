@@ -120,6 +120,10 @@ public class DrinksScreen {
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setContentText("Drink order placed!");
+            alert.showAndWait()
+                    .filter(response -> response == ButtonType.OK);
         });
         final Button backButton = new Button("Back");
         backButton.setOnAction(e -> {
