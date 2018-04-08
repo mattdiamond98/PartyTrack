@@ -67,7 +67,12 @@ public class BouncerScreen {
                 alert.showAndWait()
                         .filter(response -> response == ButtonType.OK);
                 ex.printStackTrace();
+                return;
             }
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setContentText("QR Code Assigned!");
+            alert.showAndWait()
+                    .filter(response -> response == ButtonType.OK);
             nameField.setText("");
             userTextField.setText("");
 
