@@ -43,19 +43,28 @@ public class DrinksScreen {
         PasswordField pwBox = new PasswordField();
         grid.add(pwBox, 1, 2);
 
-        Button btn = new Button("Scan Wristband");
-        HBox hbBtn = new HBox(10);
-        hbBtn.setAlignment(Pos.BOTTOM_RIGHT);
-        hbBtn.getChildren().add(btn);
-        grid.add(hbBtn, 1, 4);
+        Button btn1 = new Button("Scan Wristband");
+        HBox hbBtn1 = new HBox(10);
+        hbBtn1.setAlignment(Pos.BOTTOM_RIGHT);
+        hbBtn1.getChildren().add(btn1);
+        grid.add(hbBtn1, 1, 4);
 
-        btn.setOnAction(e -> {
+        btn1.setOnAction(e -> { //scan wristband button
             try {
                 System.out.println(OtherReader.decode(QRImage.getImage()));
             } catch (IOException ex){
                 System.out.println(ex);
             }
-            System.exit(0); //i.e. code that isn't this
+        });
+
+        Button btn2 = new Button("Cancel");
+        HBox hbBtn2 = new HBox(10);
+        hbBtn2.setAlignment(Pos.BOTTOM_RIGHT);
+        hbBtn2.getChildren().add(btn2);
+        grid.add(hbBtn2, 1, 5);
+
+        btn2.setOnAction(e -> { //cancel button
+
         });
         return grid;
 

@@ -35,7 +35,6 @@ public class OtherReader {
                 }
                 i++;
                 qrCode = QRImage.getImage();
-                System.out.println("Failed to find QR Code.");
             }
         }
 

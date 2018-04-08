@@ -24,14 +24,14 @@ public class Drink implements Serializable {
 
     /**
      * Custom Drink Constructor
-     * @param a the alcohol content of the drink
-     * @param n the name of the drink
-     * @param o the amount of ounces of the drink
+     * @param aContent the alcohol content of the drink
+     * @param name the name of the drink
+     * @param ounces the amount of ounces of the drink
      */
-    public Drink(double a, String n, double o) {
-        aContent = a;
-        name = n;
-        ounces = 0;
+    public Drink(double aContent, String name, double ounces) {
+        this.aContent = aContent;
+        this.name = name;
+        this.ounces = 0;
     }
 
     /**
@@ -53,5 +53,15 @@ public class Drink implements Serializable {
     @Override
     public String toString() {
         return name;
+    }
+
+    public static Drink parseString(String drink) {
+        if (drink == null || drink.isEmpty()) throw new IllegalArgumentException();
+        String[] fields = drink.split(",");
+        return new Drink(
+                Double.parseDouble(fields[0]),
+                fields[1],
+                Double.parseDouble(fields[2])
+        );
     }
 }
