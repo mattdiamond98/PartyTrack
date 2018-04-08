@@ -31,11 +31,26 @@ package edu.gatech.mdiamond8.partytrack.view;
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Group;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
+
+import javax.swing.*;
 
 /**
  *
@@ -49,20 +64,50 @@ import javafx.stage.Stage;
  * over the circle is removed.
  *
  */
-public class Home {
+public class HomeScreen {
 
     public static Parent getParent(Stage primaryStage) {
-        Group root = new Group();
+        GridPane grid = new GridPane();
+        grid.setAlignment(Pos.CENTER);
+        grid.setHgap(10);
+        grid.setVgap(10);
+        grid.setPadding(new Insets(25, 25, 25, 25));
 
-        for (int i = 1; i <= 5; i++) {
-            Rectangle pad = new Rectangle(100, 85, Color.BLANCHEDALMOND);
-            pad.setTranslateX((i*125-100));
-            pad.setTranslateY(470);
-            pad.setStroke(Color.GRAY);
+        Text scenetitle = new Text("Who are you");
+        scenetitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
+        scenetitle.setTextAlignment(TextAlignment.CENTER);
+        grid.add(scenetitle, 0, 0, 2, 1);
 
-            root.getChildren().add(pad);
-        }
 
-        return root;
+        Button bartenderButton = new Button("Bartender");
+        HBox hbBtn1 = new HBox(10);
+        hbBtn1.setAlignment(Pos.CENTER);
+        hbBtn1.getChildren().add(bartenderButton);
+        grid.add(hbBtn1, 1, 1);
+        bartenderButton.setOnAction(e -> {
+            Scene scene = new Scene(HomeScreen.getParent(primaryStage), 300, 275);
+            primaryStage.setScene(scene);
+        });
+
+        HBox hbBtn2 = new HBox(10);
+        Button drinksButton = new Button("Drinks");
+        hbBtn2.setAlignment(Pos.CENTER);
+        hbBtn2.getChildren().add(drinksButton);
+        grid.add(hbBtn2, 1, 2);
+        drinksButton.setOnAction(e -> {
+            Scene scene = new Scene(HomeScreen.getParent(primaryStage), 300, 275);
+            primaryStage.setScene(scene);
+        });
+
+        HBox hbBtn3 = new HBox(10);
+        Button bouncerButton = new Button("Bouncer");
+        hbBtn3.setAlignment(Pos.CENTER);
+        hbBtn3.getChildren().add(bouncerButton);
+        grid.add(hbBtn3, 1, 3);
+        bouncerButton.setOnAction(e -> {
+            Scene scene = new Scene(HomeScreen.getParent(primaryStage), 300, 275);
+            primaryStage.setScene(scene);
+        });
+        return grid;
     }
 }

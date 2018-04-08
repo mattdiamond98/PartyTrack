@@ -1,6 +1,6 @@
 package edu.gatech.mdiamond8.partytrack;
 
-import edu.gatech.mdiamond8.partytrack.view.Login;
+import edu.gatech.mdiamond8.partytrack.view.LoginScreen;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -12,7 +12,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setTitle("JavaFX Welcome");
-        Scene scene = new Scene(Login.getParent(primaryStage), 300, 275);
+        Scene scene = new Scene(LoginScreen.getParent(primaryStage), 300, 275);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
