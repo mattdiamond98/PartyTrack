@@ -22,13 +22,13 @@ public class Main extends Application {
                 } catch (Exception ex) {
 
                 }
+                try {
+                    NetworkCode.makeAttendees();
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                    System.exit(69);
+                }
             }
-        }
-        try {
-            NetworkCode.makeAttendees();
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            System.exit(69);
         }
         launch(args);
     }
