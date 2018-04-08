@@ -8,7 +8,7 @@ import edu.gatech.mdiamond8.partytrack.model.Party;
  * Author Jordan Goldstein
  */
 public abstract class User {
-    enum Types { Attendee, Bouncer, Bartender};
+    enum Types { Attendee, Bouncer, Bartender };
     protected Types type;
     protected Party partyAt;
     /**

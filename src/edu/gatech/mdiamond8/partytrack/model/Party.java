@@ -3,7 +3,6 @@ package edu.gatech.mdiamond8.partytrack.model;
 import edu.gatech.mdiamond8.partytrack.model.user.Attendee;
 import edu.gatech.mdiamond8.partytrack.model.user.Bartender;
 import edu.gatech.mdiamond8.partytrack.model.user.Bouncer;
-
 import java.util.ArrayList;
 import java.util.List;
 
