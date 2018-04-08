@@ -1,13 +1,17 @@
 package edu.gatech.mdiamond8.partytrack.view.bartender;
 
+import edu.gatech.mdiamond8.partytrack.Config;
 import edu.gatech.mdiamond8.partytrack.model.Drink;
 import edu.gatech.mdiamond8.partytrack.model.user.Attendee;
+import edu.gatech.mdiamond8.partytrack.view.HomeScreen;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
 import javafx.scene.Group;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -62,7 +66,12 @@ public class BartenderScreen {
         final VBox vbox = new VBox();
         vbox.setSpacing(5);
         vbox.setPadding(new Insets(10, 0, 0, 10));
-        vbox.getChildren().addAll(label, table);
+        final Button backButton = new Button("Back");
+        backButton.setOnAction(e -> {
+            Scene scene = new Scene(HomeScreen.getParent(primaryStage), Config.SCREEN_X, Config.SCREEN_Y);
+            primaryStage.setScene(scene);
+        });
+        vbox.getChildren().addAll(label, table, backButton);
 
         group.getChildren().addAll(vbox);
         return group;

@@ -1,11 +1,13 @@
 package edu.gatech.mdiamond8.partytrack.view.bartender;
 
+import edu.gatech.mdiamond8.partytrack.Config;
 import edu.gatech.mdiamond8.partytrack.Network.NetworkCode;
 import edu.gatech.mdiamond8.partytrack.model.Drink;
 import edu.gatech.mdiamond8.partytrack.model.Party;
 import edu.gatech.mdiamond8.partytrack.model.user.Attendee;
 import edu.gatech.mdiamond8.partytrack.qr.QRReader;
 import edu.gatech.mdiamond8.partytrack.qr.QRImage;
+import edu.gatech.mdiamond8.partytrack.view.HomeScreen;
 import edu.gatech.mdiamond8.partytrack.view.bouncer.DrinkData;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.value.ChangeListener;
@@ -15,6 +17,7 @@ import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.GridPane;
@@ -110,15 +113,22 @@ public class DrinksScreen {
             }
             DrinkQueue.getCurrentOrders().add(new DrinkOrder(guest, selected));
         });
+        final Button backButton = new Button("Back");
+        backButton.setOnAction(e -> {
+            Scene scene = new Scene(HomeScreen.getParent(primaryStage), Config.SCREEN_X, Config.SCREEN_Y);
+            primaryStage.setScene(scene);
+        });
         Button btn2 = new Button("Cancel");
         HBox hbBtn2 = new HBox(10);
         hbBtn2.setAlignment(Pos.BOTTOM_RIGHT);
-        hbBtn2.getChildren().addAll(btn1, btn2);
-        grid.add(hbBtn2, 1, 1);
+        hbBtn2.getChildren().addAll(backButton, btn1, btn2);
+        grid.add(hbBtn2, 1, 2);
 
         btn2.setOnAction(e -> { //cancel button
             QRReader.coolRunning = false;
         });
+
+
 
         final VBox vbox = new VBox();
         vbox.setSpacing(5);

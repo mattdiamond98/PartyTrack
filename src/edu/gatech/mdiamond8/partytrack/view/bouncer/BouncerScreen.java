@@ -1,11 +1,14 @@
 package edu.gatech.mdiamond8.partytrack.view.bouncer;
 
+import edu.gatech.mdiamond8.partytrack.Config;
 import edu.gatech.mdiamond8.partytrack.Network.NetworkCode;
 import edu.gatech.mdiamond8.partytrack.model.user.Attendee;
 import edu.gatech.mdiamond8.partytrack.qr.QRReader;
+import edu.gatech.mdiamond8.partytrack.view.HomeScreen;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -75,6 +78,12 @@ public class BouncerScreen {
         hbBtn2.getChildren().add(btn2);
         grid.add(hbBtn2, 1, 5);
 
+        final Button backButton = new Button("Back");
+        backButton.setOnAction(e -> {
+            Scene scene = new Scene(HomeScreen.getParent(primaryStage), Config.SCREEN_X, Config.SCREEN_Y);
+            primaryStage.setScene(scene);
+        });
+        grid.add(backButton, 1,6);
         btn2.setOnAction(e -> { //cancel button
 
         });
