@@ -11,6 +11,7 @@ public class QRReader {
     public void readBarcode(String file) {
         String[] barcodes = BarcodeScanner.Scan(file, BarcodeType.QRCode);
 
+
         for (String s : barcodes) {
             System.out.println(s);
         }
