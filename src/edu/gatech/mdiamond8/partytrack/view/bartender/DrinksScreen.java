@@ -120,10 +120,14 @@ public class DrinksScreen {
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setContentText("Drink order placed!");
+            alert.showAndWait()
+                    .filter(response -> response == ButtonType.OK);
         });
         final Button backButton = new Button("Back");
         backButton.setOnAction(e -> {
-            Scene scene = new Scene(HomeScreen.getParent(primaryStage), Config.SCREEN_X, Config.SCREEN_Y);
+            Scene scene = new Scene(HomeScreen.getParent(primaryStage), Config.SCREEN_X / 2, Config.SCREEN_Y / 2);
             primaryStage.setScene(scene);
         });
         Button btn2 = new Button("Cancel");

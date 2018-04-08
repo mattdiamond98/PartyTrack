@@ -81,7 +81,7 @@ public class BouncerScreen {
 
         final Button backButton = new Button("Back");
         backButton.setOnAction(e -> {
-            Scene scene = new Scene(HomeScreen.getParent(primaryStage), Config.SCREEN_X, Config.SCREEN_Y);
+            Scene scene = new Scene(HomeScreen.getParent(primaryStage), Config.SCREEN_X / 2, Config.SCREEN_Y / 2);
             primaryStage.setScene(scene);
         });
         grid.add(backButton, 1,6);

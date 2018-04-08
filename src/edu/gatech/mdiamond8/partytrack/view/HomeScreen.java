@@ -90,7 +90,7 @@ public class HomeScreen {
         hbBtn3.getChildren().add(bouncerButton);
         grid.add(hbBtn3, 1, 3);
         bouncerButton.setOnAction(e -> {
-            Scene scene = new Scene(BouncerScreen.getParent(primaryStage), Config.SCREEN_X, Config.SCREEN_Y);
+            Scene scene = new Scene(BouncerScreen.getParent(primaryStage), Config.SCREEN_X / 2, Config.SCREEN_Y / 2);
             primaryStage.setScene(scene);
         });
 
@@ -100,7 +100,7 @@ public class HomeScreen {
         hbBtn4.getChildren().add(adminButton);
         grid.add(hbBtn4, 1, 4);
         adminButton.setOnAction(e -> {
-            Scene scene = new Scene(AdminScreen.getParent(primaryStage), Config.SCREEN_X, Config.SCREEN_Y);
+            Scene scene = new Scene(AdminScreen.getParent(primaryStage), Config.SCREEN_X / 2 + 12, Config.SCREEN_Y);
             primaryStage.setScene(scene);
         });
 
