@@ -57,7 +57,11 @@ public class BouncerScreen {
             try {
                 NetworkCode.addGuest(guest);
             } catch (Exception ex) {
+                ex.printStackTrace();
             }
+            nameField.setText("");
+            userTextField.setText("");
+
         });
 
         Button btn2 = new Button("Cancel");

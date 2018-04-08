@@ -37,7 +37,7 @@ public class NetworkCode {
                 "code varchar(255)," +
                 "had int," +
                 "oHad int," +
-                "PRIMARY KEY (ID))";
+                "PRIMARY KEY (code))";
         stmt = connection.createStatement();
         stmt.execute(SQL);
     }
