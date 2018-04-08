@@ -64,6 +64,7 @@ public class QRReader implements Runnable {
                 Result result = new MultiFormatReader().decode(bitmap);
 
                 function.accept(result.getText());
+                coolRunning = false;
             } catch (NotFoundException ex) {
                 try {
                     Thread.sleep(10);

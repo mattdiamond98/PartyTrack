@@ -1,5 +1,7 @@
 package edu.gatech.mdiamond8.partytrack.view.bouncer;
 
+import edu.gatech.mdiamond8.partytrack.model.user.Attendee;
+import edu.gatech.mdiamond8.partytrack.qr.QRReader;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
@@ -44,7 +46,13 @@ public class BouncerScreen {
         grid.add(hbBtn1, 1, 4);
 
         btn1.setOnAction(e -> { //scan wristband button
+            Attendee guest = new Attendee(userTextField.getText(), "", null, nameField.getText());
 
+            QRReader qrReader = new QRReader(x -> {
+                guest.setCode(x);
+                System.out.println(guest.getqrCode());
+            });
+            qrReader.start();
         });
 
         Button btn2 = new Button("Cancel");
