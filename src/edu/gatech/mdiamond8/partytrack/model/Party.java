@@ -3,6 +3,10 @@ package edu.gatech.mdiamond8.partytrack.model;
 import edu.gatech.mdiamond8.partytrack.model.user.Attendee;
 import edu.gatech.mdiamond8.partytrack.model.user.Bartender;
 import edu.gatech.mdiamond8.partytrack.model.user.Bouncer;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,8 +20,10 @@ public class Party {
     private List<Bouncer> bouncers = new ArrayList<>();
     private List<Bartender> bartenders = new ArrayList<>();
     private List<Attendee> attendees = new ArrayList<>();
+    private List<String> codes = new ArrayList<>();
     private int drinkLimit;
     private String hostName;
+    private BufferedReader qrFile;
 
     /**
      * Default Party Constructor
@@ -27,18 +33,34 @@ public class Party {
         drinkList.add(new Drink());
         hostName = "AEPi";
         drinkLimit = Integer.MAX_VALUE;
+        qrFile = null;
     }
 
     /**
      * Custom Party Constructor
      * Adds Beer to drink List
+     * Creates a list of the qrcodes for the party
      * @param hostName the Party Host
      * @param drinkLimit the max amount of drinks someone can have
+     * @param fileName the name of the file containing all the qrCode strings
      */
-    public Party(String hostName, int drinkLimit) {
+    public Party(String hostName, int drinkLimit, String fileName) {
         this.hostName = hostName;
         drinkList.add(new Drink());
         this.drinkLimit = drinkLimit;
+        try {
+            FileReader file = new FileReader("Resources/" + fileName);
+            qrFile = new BufferedReader(file);
+            String qrCode;
+            while ((qrCode = qrFile.readLine()) != null) {
+                codes.add(qrCode);
+            }
+            qrFile.close();
+        } catch (FileNotFoundException ex) {
+            System.exit(0);
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
     }
 
     /**
@@ -112,5 +134,16 @@ public class Party {
      */
     public int getDrinkLimit() {
         return drinkLimit;
+    }
+
+    /**
+     * Gets the next qrCode to assign
+     * @return the next qrCode
+     */
+    public String getCode() {
+        if (codes.size() == 0) {
+            return "Fuck we ran outta codes";
+        }
+        return codes.remove(codes.size());
     }
 }
