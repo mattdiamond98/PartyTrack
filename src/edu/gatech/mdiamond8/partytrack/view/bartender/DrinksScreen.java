@@ -55,7 +55,6 @@ public class DrinksScreen {
             } catch (IOException ex){
                 System.out.println(ex);
             }
-            System.exit(0); //i.e. code that isn't this
         });
         return grid;
 
