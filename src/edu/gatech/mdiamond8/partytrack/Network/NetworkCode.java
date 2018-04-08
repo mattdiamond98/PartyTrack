@@ -131,6 +131,12 @@ public class NetworkCode {
         return new Attendee("" + id, QR, null, name);
     }
 
+    /**
+     * Finds and returns a guest based on their name
+     * @param n the guest's name
+     * @return the attendee object
+     * @throws Exception if the network fucks up
+     */
     public static Attendee getAttendeeByName(String n) throws Exception{
         Connection connection;
         Statement stmt = null;
@@ -270,6 +276,10 @@ public class NetworkCode {
         stmt.execute(SQL);
     }
 
+    /**
+     * Makes a database of filled drinks
+     * @throws Exception if the network fucks up
+     */
     public static void makeDrinksFilledList() throws Exception {
         Connection connection;
         Statement stmt = null;
@@ -292,6 +302,11 @@ public class NetworkCode {
         stmt.execute(SQL);
     }
 
+    /**
+     * Adds a drink to the drink ordered database
+     * @param rs the resultset of a remove drink query
+     * @throws Exception if the network fucks up
+     */
     public static void addDrinkOrdered(ResultSet rs) throws Exception {
         Connection connection;
         Statement stmt = null;
@@ -362,6 +377,11 @@ public class NetworkCode {
         return toReturn;
     }
 
+    /**
+     * Gets the currentdrink orders
+     * @return the current drink orders database
+     * @throws Exception if the network fucks up
+     */
     public static ResultSet getDrinkOrders() throws Exception {
         Connection connection;
         Statement stmt = null;
