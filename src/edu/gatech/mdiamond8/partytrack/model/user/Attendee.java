@@ -159,4 +159,8 @@ public class Attendee extends User implements Comparable, Serializable {
         int otherID = Integer.parseInt(other.getid());
         return myID - otherID;
     }
+
+    public void setCode(String code) {
+        this.qrCode = code;
+    }
 }
