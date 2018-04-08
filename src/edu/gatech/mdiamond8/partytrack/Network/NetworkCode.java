@@ -32,7 +32,7 @@ public class NetworkCode {
         }
         SQL = "CREATE TABLE Attendees (" +
                 "ID int," +
-                "Name text," +
+                "Name varchar(255)," +
                 "code varchar(255)," +
                 "had int," +
                 "oHad int," +
@@ -131,6 +131,39 @@ public class NetworkCode {
         return new Attendee("" + id, QR, null, name);
     }
 
+    public static Attendee getAttendeeByName(String n) throws Exception{
+        Connection connection;
+        Statement stmt = null;
+        String SQL;
+        try
+        {
+            String url = String.format("jdbc:sqlserver://partypass.database.windows.net:1433;database=PartyPass;user=jewcubed@partypass;password={AEPi2017};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;");
+            connection = DriverManager.getConnection(url);
+        }
+        catch (SQLException e)
+        {
+            throw new SQLException("Failed to create connection to database.", e);
+        }
+        SQL = String.format("SELECT * FROM Attendees WHERE Name = '%s'", n );
+        stmt = connection.createStatement();
+        ResultSet resultSet = stmt.executeQuery(SQL);
+        int id = 0;
+        String name = "Not Applicable";
+        String QR = null;
+        int dH = 0;
+        double oH = 0;
+        while (resultSet.next()) {
+            id = resultSet.getInt("ID");
+            name = resultSet.getString("Name");
+            QR = resultSet.getString("code");
+            dH = resultSet.getInt("had");
+            oH = resultSet.getDouble("oHad");
+            SQL = String.format("DELETE FROM Attendees WHERE Name = '%s'", n);
+            stmt = connection.createStatement();
+            stmt.execute(SQL);
+        }
+        return new Attendee("" + id, QR, null, name);
+    }
     /**
      * Creates a drink table in the database
      * @throws Exception if the network fucks up
@@ -324,6 +357,25 @@ public class NetworkCode {
             throw new SQLException("Failed to create connection to database.", e);
         }
         SQL = "SELECT * FROM DrinksOrdered";
+        stmt = connection.createStatement();
+        ResultSet toReturn = stmt.executeQuery(SQL);
+        return toReturn;
+    }
+
+    public static ResultSet getDrinkOrders() throws Exception {
+        Connection connection;
+        Statement stmt = null;
+        String SQL;
+        try
+        {
+            String url = String.format("jdbc:sqlserver://partypass.database.windows.net:1433;database=PartyPass;user=jewcubed@partypass;password={AEPi2017};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;");
+            connection = DriverManager.getConnection(url);
+        }
+        catch (SQLException e)
+        {
+            throw new SQLException("Failed to create connection to database.", e);
+        }
+        SQL = "SELECT * FROM DrinkOrders";
         stmt = connection.createStatement();
         ResultSet toReturn = stmt.executeQuery(SQL);
         return toReturn;

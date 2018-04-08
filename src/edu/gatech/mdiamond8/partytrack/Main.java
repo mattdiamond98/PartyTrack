@@ -1,7 +1,11 @@
 package edu.gatech.mdiamond8.partytrack;
 
 import edu.gatech.mdiamond8.partytrack.Network.NetworkCode;
+import edu.gatech.mdiamond8.partytrack.model.Drink;
+import edu.gatech.mdiamond8.partytrack.model.user.Attendee;
 import edu.gatech.mdiamond8.partytrack.view.LoginScreen;
+import edu.gatech.mdiamond8.partytrack.view.bartender.DrinkOrder;
+import edu.gatech.mdiamond8.partytrack.view.bartender.DrinkQueue;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -10,6 +14,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.Statement;
 
 
@@ -33,6 +38,16 @@ public class Main extends Application {
                     System.exit(69);
                 }
             }
+        }
+        try {
+            ResultSet rs = NetworkCode.getDrinkOrders();
+            while (rs.next()) {
+                Attendee guest = NetworkCode.getAttendeeByName(rs.getString("Name"));
+                NetworkCode.addGuest(guest);
+                DrinkQueue.getCurrentOrders().add(new DrinkOrder(guest, new Drink(0, rs.getString("Drink"), 0)));
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
         }
         launch(args);
     }
