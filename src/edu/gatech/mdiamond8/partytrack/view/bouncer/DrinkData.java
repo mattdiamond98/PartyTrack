@@ -18,6 +18,10 @@ public class DrinkData {
                 new SimpleStringProperty(ounces));
     }
 
+    public Drink toDrink() {
+        return new Drink(Double.parseDouble(getaContent()), getName(), Double.parseDouble(getOunces()));
+    }
+
     public DrinkData(SimpleStringProperty name, SimpleStringProperty aContent, SimpleStringProperty ounces) {
         this.name = name;
         this.aContent = aContent;

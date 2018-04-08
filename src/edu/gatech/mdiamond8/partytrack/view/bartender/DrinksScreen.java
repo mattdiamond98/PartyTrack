@@ -8,6 +8,8 @@ import edu.gatech.mdiamond8.partytrack.qr.QRReader;
 import edu.gatech.mdiamond8.partytrack.qr.QRImage;
 import edu.gatech.mdiamond8.partytrack.view.bouncer.DrinkData;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
@@ -18,6 +20,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
@@ -34,6 +37,8 @@ public class DrinksScreen {
     private static TableView<DrinkData> table = new TableView<>();
     static List<DrinkData> drinks = Party.getDrinkList().stream().map(e -> new DrinkData(e)).collect(Collectors.toList()); //look at this smexy syntax right here
     private static final ObservableList<DrinkData> data = FXCollections.observableArrayList(drinks);
+
+    private static Drink selected;
 
     public static Parent getParent(Stage primaryStage) {
         System.out.println(drinks);
@@ -63,6 +68,16 @@ public class DrinksScreen {
         table.setItems(data);
         table.getColumns().addAll(drinkNameCol, alcoholColumn, ouncesCol);
 
+        table.getSelectionModel().selectedItemProperty().addListener(
+                (ChangeListener<? super DrinkData>) (ov, old_val, new_val) -> {
+                    selected = new_val.toDrink(); //delete this and the variable if you don't need
+
+
+                            //Do any code here jordan
+
+
+
+                });
 
 
         Text scenetitle = new Text("Drinks");
