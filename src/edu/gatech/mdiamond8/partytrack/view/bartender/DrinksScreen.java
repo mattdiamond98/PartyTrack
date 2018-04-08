@@ -108,7 +108,7 @@ public class DrinksScreen {
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
-            DrinkQueue.getCurrentOrders().add(new DrinkOrder(guest, new Drink()));
+            DrinkQueue.getCurrentOrders().add(new DrinkOrder(guest, selected));
         });
         Button btn2 = new Button("Cancel");
         HBox hbBtn2 = new HBox(10);
