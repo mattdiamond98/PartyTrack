@@ -1,13 +1,11 @@
 package edu.gatech.mdiamond8.partytrack.model;
 
-import java.io.Serializable;
-
 /**
  * Represents a drink
  *
  * @author Jordan Goldstein
  */
-public class Drink implements Serializable {
+public class Drink {
     private double aContent;
     private double ounces;
     private String name;
@@ -31,7 +29,27 @@ public class Drink implements Serializable {
     public Drink(double aContent, String name, double ounces) {
         this.aContent = aContent;
         this.name = name;
-        this.ounces = 0;
+        this.ounces = ounces;
+    }
+
+    public double getOunces() {
+        return ounces;
+    }
+
+    public double getaContent() {
+        return aContent;
+    }
+
+    public void setaContent(double aContent) {
+        this.aContent = aContent;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setOunces(double ounces) {
+        this.ounces = ounces;
     }
 
     /**
