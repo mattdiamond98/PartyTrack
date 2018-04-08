@@ -10,6 +10,11 @@ import com.github.sarxos.webcam.Webcam;
  * @author Matthew Sklar
  */
 public class QRImage {
+    /**
+     * Get an image from the webcam.
+     *
+     * @return the image from the webcam
+     */
     public static BufferedImage getImage() {
         Webcam webcam = Webcam.getDefault();
         webcam.open();
