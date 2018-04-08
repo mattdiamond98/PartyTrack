@@ -10,7 +10,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Represents the Party
@@ -21,7 +23,7 @@ public class Party {
     private List<Drink> drinkList = new ArrayList<Drink>();
     private List<Bouncer> bouncers = new ArrayList<>();
     private List<Bartender> bartenders = new ArrayList<>();
-    private List<Attendee> attendees = new ArrayList<>();
+    private Map<String, Attendee> attendees = new HashMap<>();
     //private List<String> codes = new ArrayList<>(); Deprecated
     private int drinkLimit;
     private String hostName;
@@ -90,8 +92,7 @@ public class Party {
      * @param guest the guest to add
      */
     public void addAttendee(Attendee guest) {
-        attendees.add(guest);
-        Collections.sort(attendees);
+        attendees.put(guest.getqrCode(), guest);
     }
     /**
      * Return the Host of the Party
@@ -129,7 +130,7 @@ public class Party {
      * Get this list of current attendees
      * @return the list of attendees
      */
-    public List<Attendee> getAttendees() {
+    public Map<String, Attendee> getAttendees() {
         return attendees;
     }
 
