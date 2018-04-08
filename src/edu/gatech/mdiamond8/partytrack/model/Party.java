@@ -3,6 +3,8 @@ package edu.gatech.mdiamond8.partytrack.model;
 import edu.gatech.mdiamond8.partytrack.model.user.Attendee;
 import edu.gatech.mdiamond8.partytrack.model.user.Bartender;
 import edu.gatech.mdiamond8.partytrack.model.user.Bouncer;
+import edu.gatech.mdiamond8.partytrack.view.bartender.DrinkQueue;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -24,10 +26,10 @@ public class Party {
     private List<Bouncer> bouncers = new ArrayList<>();
     private List<Bartender> bartenders = new ArrayList<>();
     private Map<String, Attendee> attendees = new HashMap<>();
-    //private List<String> codes = new ArrayList<>(); Deprecated
+    private DrinkQueue drinkQueue = new DrinkQueue();
+
     private int drinkLimit;
     private String hostName;
-    //private BufferedReader qrFile; Deprecated
 
     /**
      * Default Party Constructor
@@ -74,15 +76,15 @@ public class Party {
      * @param aContent the alcohol content of the drink
      * @param ounces the size of the drink
      */
-    public void addDrink(String name, double aContent, double ounces) {
-        drinkList.add(new Drink(aContent, name, ounces));
+    public void addDrinkType(String name, double aContent, double ounces) {
+        addDrinkType(new Drink(aContent, name, ounces));
     }
 
     /**
      * Adds a drink to the drink list of the party
      * @param drink the drink to add
      */
-    public void addDrink(Drink drink) {
+    public void addDrinkType(Drink drink) {
         drinkList.add(drink);
     }
 
@@ -142,15 +144,11 @@ public class Party {
         return drinkLimit;
     }
 
-    /**
-     * DEPRECATED
-     * Gets the next qrCode to assign
-     * @return the next qrCode
-     */
-    /**public String getCode() {
-        if (codes.size() == 0) {
-            return "Fuck we ran outta codes";
-        }
-        return codes.remove(codes.size());
-    }*/
+    public DrinkQueue getDrinkQueue() {
+        return drinkQueue;
+    }
+
+    public void setDrinkQueue(DrinkQueue drinkQueue) {
+        this.drinkQueue = drinkQueue;
+    }
 }
