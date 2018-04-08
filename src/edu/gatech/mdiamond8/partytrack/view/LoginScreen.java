@@ -51,21 +51,9 @@ public class LoginScreen {
         hbBtn.getChildren().add(btn);
         grid.add(hbBtn, 1, 4);
 
-        final Text actiontarget = new Text();
-        grid.add(actiontarget, 0, 6);
-        grid.setColumnSpan(actiontarget, 2);
-        grid.setHalignment(actiontarget, RIGHT);
-        actiontarget.setId("actiontarget");
-
-        btn.setOnAction(new EventHandler<ActionEvent>() {
-
-            @Override
-            public void handle(ActionEvent e) {
-                actiontarget.setFill(Color.FIREBRICK);
-                actiontarget.setText("Sign in button pressed");
-                Scene scene = new Scene(HomeScreen.getParent(primaryStage), 300, 275);
-                primaryStage.setScene(scene);
-            }
+        btn.setOnAction(e -> {
+            Scene scene = new Scene(HomeScreen.getParent(primaryStage), 300, 275);
+            primaryStage.setScene(scene);
         });
         return grid;
     }
