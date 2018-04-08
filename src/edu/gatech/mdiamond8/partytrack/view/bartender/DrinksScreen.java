@@ -1,6 +1,8 @@
 package edu.gatech.mdiamond8.partytrack.view.bartender;
 
-import edu.gatech.mdiamond8.partytrack.view.HomeScreen;
+import edu.gatech.mdiamond8.partytrack.qr.Image;
+import edu.gatech.mdiamond8.partytrack.qr.OtherReader;
+import edu.gatech.mdiamond8.partytrack.qr.QRImage;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
@@ -16,9 +18,14 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 public class DrinksScreen {
 
     public static Parent getParent(Stage primaryStage) {
+        //Image image = new Image();
+        QRImage image = new QRImage();
+
         GridPane grid = new GridPane();
         grid.setAlignment(Pos.CENTER);
         grid.setHgap(10);
@@ -51,6 +58,12 @@ public class DrinksScreen {
             /**
              * TODO: Sklar add code here
              */
+            //try {
+                image.getImage();
+                //OtherReader.decode(image.getImage());
+            /*} catch (IOException ex){
+                System.out.println(ex);
+            }*/
             System.exit(0); //i.e. code that isn't this
         });
         return grid;
