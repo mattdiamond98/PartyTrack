@@ -1,5 +1,7 @@
 package edu.gatech.mdiamond8.partytrack.view.bartender;
 
+import edu.gatech.mdiamond8.partytrack.Network.NetworkCode;
+import edu.gatech.mdiamond8.partytrack.model.user.Attendee;
 import edu.gatech.mdiamond8.partytrack.qr.QRReader;
 import edu.gatech.mdiamond8.partytrack.qr.QRImage;
 import javafx.beans.property.SimpleStringProperty;
@@ -43,7 +45,26 @@ public class DrinksScreen {
         grid.add(hbBtn1, 1, 4);
 
         btn1.setOnAction(e -> { //scan wristband button
-            QRReader qrReader = new QRReader(x -> System.out.println(x));
+            Attendee guest = new Attendee(null,null,null,null);
+            QRReader qrReader = new QRReader(x -> {
+                Attendee temp;
+                try {
+                    temp = NetworkCode.getAttendee(x);
+                } catch (Exception ex) {
+                    temp = new Attendee(null,null,null,null);
+                    ex.printStackTrace();
+                }
+                guest.setCode(temp.getqrCode());
+                guest.setName(temp.getName());
+                guest.setId(temp.getid());
+                guest.setDrinksHad(temp.getDrinksHad());
+                guest.setOuncesAHad(temp.getOuncesAHad());
+            });
+            try {
+                qrReader.t.join();
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
             qrReader.start();
         });
 
